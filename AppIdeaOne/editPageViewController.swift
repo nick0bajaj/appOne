@@ -7,35 +7,38 @@
 //
 
 import UIKit
-import Firebase
 
 class editPageViewController: UIViewController {
-    
-    let completedSegue = "profileCreatedSegue"
-    
+        
     let profileCreator = setUpProfile()
     
+    let db = DBProvider()
+    
+    
+    @IBAction func profileButton(_ sender: Any) {
+    }
+    
+    var backSegue = "profileCreatedSegue"
 
-    @IBOutlet weak var titleName: UILabel!
+    @IBOutlet weak var myName: UILabel!
+
+    @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     @IBOutlet weak var aboutMeTextField: UITextField!
     
+    @IBAction func completedButton(_ sender: Any) {
+        db.uploadInfo(Location: Constants.PHONENUMBER, Value: phoneNumberTextField.text!)
+        db.uploadInfo(Location: Constants.ABOUTME, Value: aboutMeTextField.text!)
+        self.performSegue(withIdentifier: self.backSegue, sender: nil)
+    }
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.performSegue(withIdentifier: self.backSegue, sender: nil)
+    }
 
-//    
-//    @IBAction func backButton(_ sender: Any) {
-//        if("user exists"){
-//            self.performSegue(withIdentifier: <#T##String#>, sender: nil)
-//        } else {
-//            self.performSegue(withIdentifier: self.completedSegue, sender: nil)
-//        }
-//    }
-//    
-//    @IBAction func completedButton(_ sender: Any) {
-//        profileCreator.uploadData(phoneNumber: phoneNumberTextField.text!, aboutMe: aboutMeTextField.text!)
-//        self.performSegue(withIdentifier: self.completedSegue, sender: nil)
-//    }
     
     @IBAction func editProfilePicture(_ sender: Any) {
         //profileCreator.swapPhoto(profilePicture)
@@ -43,5 +46,12 @@ class editPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let firstName = db.retrieveInfo(Location: Constants.FIRSTNAME)
+        let lastName = db.retrieveInfo(Location: Constants.LASTNAME)
+        myName.text = firstName + " " + lastName
+        emailTextField.text = db.retrieveInfo(Location: Constants.EMAIL)
+        phoneNumberTextField.text = db.retrieveInfo(Location: Constants.PHONENUMBER)
+        aboutMeTextField.text = db.retrieveInfo(Location: Constants.ABOUTME)
+        emailTextField.isUserInteractionEnabled = false
     }
 }

@@ -12,17 +12,14 @@ import Foundation
 class Constants {
     
     //DBProvider
-    static let ID = "id"
+    static let ID = "ID"
     static let EMAIL = "email"
-    static let COLLEGES = "colleges"
+    static let COLLEGE = "college"
     static let PASSWORD = "password"
-    static let AGE = "age"
     static let FIRSTNAME = "firstName"
     static let LASTNAME = "lastName"
     static let TRIPS = "trips"
-    static let DATA = "data"
-    static let DRIVER = "driver"
-    static let RIDER = "rider"
-    static let DESTINATION = "destination"
+    static let ABOUTME = "aboutMe"
+    static let PHONENUMBER = "phoneNumber"
     
 }

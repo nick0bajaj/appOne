@@ -725,10 +725,6 @@
                                                             <constraint firstAttribute="width" constant="30" id="EsF-R4-iQP"/>
                                                         </constraints>
                                                         <state key="normal" title="BackButton" image="icons8-Circled Left_50"/>
-                                                        <connections>
-                                                            <action selector="backButton:" destination="hmo-Ml-NM7" eventType="touchUpInside" id="Fpg-6h-LMn"/>
-                                                            <segue destination="g2j-TR-1wX" kind="show" id="slJ-di-deK"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olD-U2-6h8">
                                                         <rect key="frame" x="0.0" y="21" width="375" height="32.5"/>
@@ -743,7 +739,7 @@
                                                         </constraints>
                                                         <state key="normal" backgroundImage="icons8-Checkmark_96"/>
                                                         <connections>
-                                                            <action selector="completedButton:" destination="hmo-Ml-NM7" eventType="touchUpInside" id="fiO-mF-MK5"/>
+                                                            <action selector="completedButton:" destination="hmo-Ml-NM7" eventType="touchUpInside" id="CPb-Za-H7z"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -779,7 +775,7 @@
                                                         </constraints>
                                                         <state key="normal" image="profile"/>
                                                         <connections>
-                                                            <action selector="editProfilePicture:" destination="hmo-Ml-NM7" eventType="touchUpInside" id="LUT-zP-aNu"/>
+                                                            <action selector="profileButton:" destination="hmo-Ml-NM7" eventType="touchUpInside" id="yOV-RZ-2fC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -802,37 +798,32 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-aH-fO7">
                                                 <rect key="frame" x="10" y="0.0" width="355" height="387"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxT-gg-ots">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqE-Gv-pPk">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="hi9-Ez-EoG"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-PR-iF9">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-PR-iF9">
                                                         <rect key="frame" x="0.0" y="43" width="355" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="clI-Q8-2yU"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
-                                                        <connections>
-                                                            <action selector="phoneNumber:" destination="hmo-Ml-NM7" eventType="editingDidEnd" id="QaN-sM-KI0"/>
-                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="About me" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxJ-jc-mjf">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="About me" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxJ-jc-mjf">
                                                         <rect key="frame" x="0.0" y="86" width="355" height="301"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="aboutMe:" destination="hmo-Ml-NM7" eventType="editingDidEnd" id="smv-ep-c6W"/>
-                                                        </connections>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vjy-PR-iF9" firstAttribute="height" secondItem="gqE-Gv-pPk" secondAttribute="height" id="lCA-N6-tVa"/>
+                                                    <constraint firstItem="vjy-PR-iF9" firstAttribute="width" secondItem="gqE-Gv-pPk" secondAttribute="width" id="mc2-TB-Skw"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -859,11 +850,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="aboutMeTextField" destination="rxJ-jc-mjf" id="FCL-S2-jdZ"/>
-                        <outlet property="emailAddressLabel" destination="BxT-gg-ots" id="Zjg-1x-HyG"/>
-                        <outlet property="phoneNumberTextField" destination="vjy-PR-iF9" id="593-Tn-zI6"/>
-                        <outlet property="titleName" destination="olD-U2-6h8" id="odT-UD-VVK"/>
+                        <outlet property="aboutMeTextField" destination="rxJ-jc-mjf" id="5yg-1q-Hr9"/>
+                        <outlet property="emailTextField" destination="gqE-Gv-pPk" id="R3D-Kz-3nF"/>
+                        <outlet property="myName" destination="olD-U2-6h8" id="8nV-qJ-VOg"/>
+                        <outlet property="phoneNumberTextField" destination="vjy-PR-iF9" id="9B5-To-h12"/>
                         <segue destination="g2j-TR-1wX" kind="show" identifier="profileCreatedSegue" id="eUG-mO-9sx"/>
+                        <segue destination="mbV-nK-01w" kind="show" identifier="editProfileReturnSegue" id="A3L-Tw-JPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zba-Jy-lJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1574,10 +1566,11 @@
         <image name="profile" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="slJ-di-deK"/>
-        <segue reference="wJp-Rk-Ox6"/>
         <segue reference="IdH-Rm-Kmy"/>
+        <segue reference="A3L-Tw-JPA"/>
+        <segue reference="wJp-Rk-Ox6"/>
+        <segue reference="eUG-mO-9sx"/>
+        <segue reference="55t-zK-Ugr"/>
         <segue reference="PQ3-hM-qWI"/>
-        <segue reference="adX-xu-Y6u"/>
     </inferredMetricsTieBreakers>
 </document>

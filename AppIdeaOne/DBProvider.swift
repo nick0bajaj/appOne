@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 
 
 class DBProvider {
@@ -15,6 +16,8 @@ class DBProvider {
     static var Instance : DBProvider {
         return instance
     }
+    
+    let id = Auth.auth().currentUser?.uid
     
     var ref: DatabaseReference {
     
@@ -29,12 +32,31 @@ class DBProvider {
     func saveUser(withID: String, firstName: String, lastName: String, email: String, password: String){
         let emailChecker = supportedColleges()
         let college: String = emailChecker.whatCollege(email: email)
-        let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.FIRSTNAME : firstName, Constants.LASTNAME : lastName, Constants.PASSWORD: password, Constants.COLLEGES : college]
-        userRef.child(withID).child(Constants.DATA).setValue(data)
+        uploadInfo(Location: Constants.EMAIL, Value: email)
+        uploadInfo(Location: Constants.COLLEGE, Value: college)
+        uploadInfo(Location: Constants.FIRSTNAME, Value: firstName)
+        uploadInfo(Location: Constants.LASTNAME, Value: lastName)
+        uploadInfo(Location: Constants.PASSWORD, Value: password)
+        
     }
     
     func updateProfile(number: String, aboutMe: String) {
         
+    }
+    
+    func uploadInfo(Location: String, Value : Any) {
+        userRef.child(self.id!).child(Location).setValue(Value)
+    }
+    func retrieveInfo(Location : String) -> String{
+        print("started to retrieve info")
+        var rtn = ""
+        userRef.child(self.id!).observeSingleEvent(of: .value, with: {(snapshot) in
+        let value = snapshot.value as? NSDictionary
+        rtn = (value?[Location] as? String)!
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        return rtn
     }
     
 //    func swapPhoto(photo){
