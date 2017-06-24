@@ -1,0 +1,480 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "postTripViewController"
+provides-nominal:
+- "C5Split22postTripViewController"
+provides-member:
+- ["C5Split22postTripViewController", ""]
+provides-dynamic-lookup:
+- "canDrive"
+- "createTrip"
+- "day"
+- "destination"
+- "driverButton"
+- "extraInfo"
+- "isDriver"
+- "isRider"
+- "month"
+- "pickUp"
+- "riderButton"
+- "viewDidLoad"
+- "year"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "StringLiteralType"
+- "UIButton"
+- !private "UIControlState"
+- !private "UIFont"
+- "UISwitch"
+- "UITextField"
+- "UIViewController"
+- "postTripViewController"
+depends-member:
+- !private ["Ps9AnyObject", "UIControlState"]
+- !private ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "driverButton"]
+- !private ["Ps9AnyObject", "font"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "riderButton"]
+- !private ["Ps9AnyObject", "setTitle"]
+- !private ["Ps9AnyObject", "titleLabel"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["PSo15CALayerDelegate", "font"]
+- !private ["PSo15CALayerDelegate", "setTitle"]
+- !private ["PSo15CALayerDelegate", "titleLabel"]
+- !private ["Ps7CVarArg", "UIControlState"]
+- !private ["Ps7CVarArg", "UIFont"]
+- !private ["Ps7CVarArg", "driverButton"]
+- !private ["Ps7CVarArg", "font"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "riderButton"]
+- !private ["Ps7CVarArg", "setTitle"]
+- !private ["Ps7CVarArg", "titleLabel"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
+- !private ["Ps28CustomDebugStringConvertible", "UIFont"]
+- !private ["Ps28CustomDebugStringConvertible", "driverButton"]
+- !private ["Ps28CustomDebugStringConvertible", "font"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "riderButton"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "titleLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "UIControlState"]
+- !private ["Ps23CustomStringConvertible", "UIFont"]
+- !private ["Ps23CustomStringConvertible", "driverButton"]
+- !private ["Ps23CustomStringConvertible", "font"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "riderButton"]
+- !private ["Ps23CustomStringConvertible", "setTitle"]
+- !private ["Ps23CustomStringConvertible", "titleLabel"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "UIControlState"]
+- !private ["Ps9Equatable", "UIFont"]
+- !private ["Ps9Equatable", "driverButton"]
+- !private ["Ps9Equatable", "font"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "normal"]
+- !private ["Ps9Equatable", "riderButton"]
+- !private ["Ps9Equatable", "selected"]
+- !private ["Ps9Equatable", "setTitle"]
+- !private ["Ps9Equatable", "titleLabel"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "normal"]
+- !private ["Ps25ExpressibleByArrayLiteral", "selected"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "UIControlState"]
+- !private ["Ps8Hashable", "UIFont"]
+- !private ["Ps8Hashable", "driverButton"]
+- !private ["Ps8Hashable", "font"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "riderButton"]
+- !private ["Ps8Hashable", "setTitle"]
+- !private ["Ps8Hashable", "titleLabel"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "UIControlState"]
+- !private ["PSo8NSCoding", "UIFont"]
+- !private ["PSo8NSCoding", "driverButton"]
+- !private ["PSo8NSCoding", "font"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "riderButton"]
+- !private ["PSo8NSCoding", "setTitle"]
+- !private ["PSo8NSCoding", "titleLabel"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
+- !private ["PSo26NSExtensionRequestHandling", "UIFont"]
+- !private ["PSo26NSExtensionRequestHandling", "driverButton"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "riderButton"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIControlState"]
+- !private ["CSo8NSObject", "UIFont"]
+- ["CSo8NSObject", "UISwitch"]
+- ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "canDrive"]
+- ["CSo8NSObject", "createTrip"]
+- ["CSo8NSObject", "day"]
+- ["CSo8NSObject", "destination"]
+- ["CSo8NSObject", "driverButton"]
+- ["CSo8NSObject", "extraInfo"]
+- !private ["CSo8NSObject", "font"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isDriver"]
+- ["CSo8NSObject", "isRider"]
+- ["CSo8NSObject", "month"]
+- ["CSo8NSObject", "pickUp"]
+- ["CSo8NSObject", "riderButton"]
+- !private ["CSo8NSObject", "setTitle"]
+- !private ["CSo8NSObject", "titleLabel"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "year"]
+- !private ["PSo16NSObjectProtocol", "UIControlState"]
+- !private ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "driverButton"]
+- !private ["PSo16NSObjectProtocol", "font"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "riderButton"]
+- !private ["PSo16NSObjectProtocol", "setTitle"]
+- !private ["PSo16NSObjectProtocol", "titleLabel"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps9OptionSet", "normal"]
+- !private ["Ps9OptionSet", "selected"]
+- !private ["Ps16RawRepresentable", "normal"]
+- !private ["Ps16RawRepresentable", "selected"]
+- !private ["Ps10SetAlgebra", "normal"]
+- !private ["Ps10SetAlgebra", "selected"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "font"]
+- !private ["PSo29UIAccessibilityIdentification", "setTitle"]
+- !private ["PSo29UIAccessibilityIdentification", "titleLabel"]
+- !private ["PSo12UIAppearance", "font"]
+- !private ["PSo12UIAppearance", "setTitle"]
+- !private ["PSo12UIAppearance", "titleLabel"]
+- !private ["PSo21UIAppearanceContainer", "UIControlState"]
+- !private ["PSo21UIAppearanceContainer", "UIFont"]
+- !private ["PSo21UIAppearanceContainer", "driverButton"]
+- !private ["PSo21UIAppearanceContainer", "font"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "riderButton"]
+- !private ["PSo21UIAppearanceContainer", "setTitle"]
+- !private ["PSo21UIAppearanceContainer", "titleLabel"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "setTitle"]
+- !private ["CSo8UIButton", "titleLabel"]
+- !private ["PSo18UIContentContainer", "UIControlState"]
+- !private ["PSo18UIContentContainer", "UIFont"]
+- !private ["PSo18UIContentContainer", "driverButton"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "riderButton"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "font"]
+- !private ["CSo9UIControl", "setTitle"]
+- !private ["CSo9UIControl", "titleLabel"]
+- !private ["VSC14UIControlState", "normal"]
+- !private ["VSC14UIControlState", "selected"]
+- !private ["PSo17UICoordinateSpace", "font"]
+- !private ["PSo17UICoordinateSpace", "setTitle"]
+- !private ["PSo17UICoordinateSpace", "titleLabel"]
+- !private ["PSo13UIDynamicItem", "font"]
+- !private ["PSo13UIDynamicItem", "setTitle"]
+- !private ["PSo13UIDynamicItem", "titleLabel"]
+- !private ["PSo18UIFocusEnvironment", "UIControlState"]
+- !private ["PSo18UIFocusEnvironment", "UIFont"]
+- !private ["PSo18UIFocusEnvironment", "driverButton"]
+- !private ["PSo18UIFocusEnvironment", "font"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "riderButton"]
+- !private ["PSo18UIFocusEnvironment", "setTitle"]
+- !private ["PSo18UIFocusEnvironment", "titleLabel"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "font"]
+- !private ["PSo11UIFocusItem", "setTitle"]
+- !private ["PSo11UIFocusItem", "titleLabel"]
+- !private ["CSo6UIFont", "init"]
+- !private ["CSo7UILabel", "font"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIControlState"]
+- !private ["CSo11UIResponder", "UIFont"]
+- ["CSo11UIResponder", "UISwitch"]
+- ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "canDrive"]
+- ["CSo11UIResponder", "createTrip"]
+- ["CSo11UIResponder", "day"]
+- ["CSo11UIResponder", "destination"]
+- ["CSo11UIResponder", "driverButton"]
+- ["CSo11UIResponder", "extraInfo"]
+- !private ["CSo11UIResponder", "font"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "isDriver"]
+- ["CSo11UIResponder", "isRider"]
+- ["CSo11UIResponder", "month"]
+- ["CSo11UIResponder", "pickUp"]
+- ["CSo11UIResponder", "riderButton"]
+- !private ["CSo11UIResponder", "setTitle"]
+- !private ["CSo11UIResponder", "titleLabel"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "year"]
+- !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
+- !private ["PSo30UIResponderStandardEditActions", "UIFont"]
+- !private ["PSo30UIResponderStandardEditActions", "driverButton"]
+- !private ["PSo30UIResponderStandardEditActions", "font"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "riderButton"]
+- !private ["PSo30UIResponderStandardEditActions", "setTitle"]
+- !private ["PSo30UIResponderStandardEditActions", "titleLabel"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "UIControlState"]
+- !private ["PSo16UIStateRestoring", "UIFont"]
+- !private ["PSo16UIStateRestoring", "driverButton"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "riderButton"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "UIControlState"]
+- !private ["PSo18UITraitEnvironment", "UIFont"]
+- !private ["PSo18UITraitEnvironment", "driverButton"]
+- !private ["PSo18UITraitEnvironment", "font"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "riderButton"]
+- !private ["PSo18UITraitEnvironment", "setTitle"]
+- !private ["PSo18UITraitEnvironment", "titleLabel"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "font"]
+- !private ["CSo6UIView", "setTitle"]
+- !private ["CSo6UIView", "titleLabel"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIControlState"]
+- !private ["CSo16UIViewController", "UIFont"]
+- ["CSo16UIViewController", "UISwitch"]
+- ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "canDrive"]
+- ["CSo16UIViewController", "createTrip"]
+- ["CSo16UIViewController", "day"]
+- ["CSo16UIViewController", "destination"]
+- ["CSo16UIViewController", "driverButton"]
+- ["CSo16UIViewController", "extraInfo"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "isDriver"]
+- ["CSo16UIViewController", "isRider"]
+- ["CSo16UIViewController", "month"]
+- ["CSo16UIViewController", "pickUp"]
+- ["CSo16UIViewController", "riderButton"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "year"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "font"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setTitle"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleLabel"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "UIControlState"]
+- !private ["Ps9_Hashable", "UIFont"]
+- !private ["Ps9_Hashable", "driverButton"]
+- !private ["Ps9_Hashable", "font"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "riderButton"]
+- !private ["Ps9_Hashable", "setTitle"]
+- !private ["Ps9_Hashable", "titleLabel"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["C5Split22postTripViewController", "UIButton"]
+- !private ["C5Split22postTripViewController", "UIControlState"]
+- !private ["C5Split22postTripViewController", "UIFont"]
+- ["C5Split22postTripViewController", "UISwitch"]
+- ["C5Split22postTripViewController", "UITextField"]
+- ["C5Split22postTripViewController", "canDrive"]
+- ["C5Split22postTripViewController", "createTrip"]
+- ["C5Split22postTripViewController", "day"]
+- ["C5Split22postTripViewController", "deinit"]
+- ["C5Split22postTripViewController", "destination"]
+- ["C5Split22postTripViewController", "driverButton"]
+- ["C5Split22postTripViewController", "extraInfo"]
+- ["C5Split22postTripViewController", "init"]
+- ["C5Split22postTripViewController", "isDriver"]
+- ["C5Split22postTripViewController", "isRider"]
+- ["C5Split22postTripViewController", "month"]
+- ["C5Split22postTripViewController", "pickUp"]
+- ["C5Split22postTripViewController", "riderButton"]
+- ["C5Split22postTripViewController", "viewDidLoad"]
+- ["C5Split22postTripViewController", "year"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps9OptionSet"
+- !private "Ps16RawRepresentable"
+- !private "Ps10SetAlgebra"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "VSC14UIControlState"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo6UIFont"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- "C5Split22postTripViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "b8aacf65067d97a791c7643b9d9de768"

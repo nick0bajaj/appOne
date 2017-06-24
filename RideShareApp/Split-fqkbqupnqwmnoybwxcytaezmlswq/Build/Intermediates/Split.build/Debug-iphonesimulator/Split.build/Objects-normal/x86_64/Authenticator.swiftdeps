@@ -1,0 +1,421 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LoginHandler"
+- "LoginError"
+- "Authenticator"
+provides-nominal:
+- "V5Split10LoginError"
+- "C5Split13Authenticator"
+provides-member:
+- ["V5Split10LoginError", ""]
+- ["C5Split13Authenticator", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "=="
+- !private ">="
+- !private "Auth"
+- !private "AuthErrorCode"
+- "Authenticator"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "DBProvider"
+- "LoginError"
+- "LoginHandler"
+- !private "NSError"
+- !private "NSPredicate"
+- "String"
+- "StringLiteralType"
+- "Void"
+- !private "supportedColleges"
+depends-member:
+- !private ["Ps9AnyObject", "Auth"]
+- !private ["Ps9AnyObject", "AuthErrorCode"]
+- ["Ps9AnyObject", "Authenticator"]
+- !private ["Ps9AnyObject", "DBProvider"]
+- !private ["Ps9AnyObject", "Instance"]
+- !private ["Ps9AnyObject", "LoginError"]
+- !private ["Ps9AnyObject", "NSPredicate"]
+- !private ["Ps9AnyObject", "auth"]
+- !private ["Ps9AnyObject", "characters"]
+- !private ["Ps9AnyObject", "code"]
+- !private ["Ps9AnyObject", "createUser"]
+- !private ["Ps9AnyObject", "currentUser"]
+- !private ["Ps9AnyObject", "evaluate"]
+- !private ["Ps9AnyObject", "handleErrors"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isEmail"]
+- !private ["Ps9AnyObject", "isValidEmail"]
+- !private ["Ps9AnyObject", "login"]
+- !private ["Ps9AnyObject", "saveUser"]
+- !private ["Ps9AnyObject", "signIn"]
+- !private ["Ps9AnyObject", "signOut"]
+- !private ["Ps9AnyObject", "supportedColleges"]
+- !private ["Ps9AnyObject", "uid"]
+- !private ["Ps9AnyObject", "whatCollege"]
+- ["Ps9AnyObject", ""]
+- !private ["CSo4Auth", "auth"]
+- !private ["CSo4Auth", "createUser"]
+- !private ["CSo4Auth", "currentUser"]
+- !private ["CSo4Auth", "signIn"]
+- !private ["CSo4Auth", "signOut"]
+- !private ["OSC13AuthErrorCode", "emailAlreadyInUse"]
+- !private ["OSC13AuthErrorCode", "init"]
+- !private ["OSC13AuthErrorCode", "invalidEmail"]
+- !private ["OSC13AuthErrorCode", "userNotFound"]
+- !private ["OSC13AuthErrorCode", "wrongPassword"]
+- !private ["C5Split13Authenticator", "Auth"]
+- !private ["C5Split13Authenticator", "AuthErrorCode"]
+- ["C5Split13Authenticator", "Authenticator"]
+- ["C5Split13Authenticator", "Bool"]
+- !private ["C5Split13Authenticator", "DBProvider"]
+- !private ["C5Split13Authenticator", "LoginError"]
+- ["C5Split13Authenticator", "LoginHandler"]
+- !private ["C5Split13Authenticator", "NSError"]
+- !private ["C5Split13Authenticator", "NSPredicate"]
+- ["C5Split13Authenticator", "String"]
+- !private ["C5Split13Authenticator", "auth"]
+- ["C5Split13Authenticator", "authorizer"]
+- ["C5Split13Authenticator", "checkEmail"]
+- ["C5Split13Authenticator", "checkName"]
+- ["C5Split13Authenticator", "deinit"]
+- !private ["C5Split13Authenticator", "handleErrors"]
+- ["C5Split13Authenticator", "init"]
+- !private ["C5Split13Authenticator", "isEmail"]
+- !private ["C5Split13Authenticator", "isValidEmail"]
+- ["C5Split13Authenticator", "login"]
+- ["C5Split13Authenticator", "logout"]
+- ["C5Split13Authenticator", "passwordsPass"]
+- ["C5Split13Authenticator", "signUp"]
+- !private ["C5Split13Authenticator", "supportedColleges"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "auth"]
+- !private ["Ps7CVarArg", "characters"]
+- !private ["Ps7CVarArg", "code"]
+- !private ["Ps7CVarArg", "createUser"]
+- !private ["Ps7CVarArg", "currentUser"]
+- !private ["Ps7CVarArg", "evaluate"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "signIn"]
+- !private ["Ps7CVarArg", "signOut"]
+- !private ["Ps7CVarArg", "uid"]
+- !private ["VSS13CharacterView", "count"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Comparable", "characters"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "auth"]
+- !private ["Ps28CustomDebugStringConvertible", "characters"]
+- !private ["Ps28CustomDebugStringConvertible", "code"]
+- !private ["Ps28CustomDebugStringConvertible", "createUser"]
+- !private ["Ps28CustomDebugStringConvertible", "currentUser"]
+- !private ["Ps28CustomDebugStringConvertible", "evaluate"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "signIn"]
+- !private ["Ps28CustomDebugStringConvertible", "signOut"]
+- !private ["Ps28CustomDebugStringConvertible", "uid"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "characters"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "characters"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "auth"]
+- !private ["Ps23CustomStringConvertible", "characters"]
+- !private ["Ps23CustomStringConvertible", "code"]
+- !private ["Ps23CustomStringConvertible", "createUser"]
+- !private ["Ps23CustomStringConvertible", "currentUser"]
+- !private ["Ps23CustomStringConvertible", "evaluate"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "signIn"]
+- !private ["Ps23CustomStringConvertible", "signOut"]
+- !private ["Ps23CustomStringConvertible", "uid"]
+- !private ["C5Split10DBProvider", "Instance"]
+- !private ["C5Split10DBProvider", "saveUser"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "auth"]
+- !private ["Ps9Equatable", "characters"]
+- !private ["Ps9Equatable", "code"]
+- !private ["Ps9Equatable", "createUser"]
+- !private ["Ps9Equatable", "currentUser"]
+- !private ["Ps9Equatable", "emailAlreadyInUse"]
+- !private ["Ps9Equatable", "evaluate"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "invalidEmail"]
+- !private ["Ps9Equatable", "signIn"]
+- !private ["Ps9Equatable", "signOut"]
+- !private ["Ps9Equatable", "uid"]
+- !private ["Ps9Equatable", "userNotFound"]
+- !private ["Ps9Equatable", "wrongPassword"]
+- !private ["Ps5Error", "code"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "characters"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "characters"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "characters"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "auth"]
+- !private ["Ps8Hashable", "characters"]
+- !private ["Ps8Hashable", "code"]
+- !private ["Ps8Hashable", "createUser"]
+- !private ["Ps8Hashable", "currentUser"]
+- !private ["Ps8Hashable", "emailAlreadyInUse"]
+- !private ["Ps8Hashable", "evaluate"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "invalidEmail"]
+- !private ["Ps8Hashable", "signIn"]
+- !private ["Ps8Hashable", "signOut"]
+- !private ["Ps8Hashable", "uid"]
+- !private ["Ps8Hashable", "userNotFound"]
+- !private ["Ps8Hashable", "wrongPassword"]
+- ["V5Split10LoginError", "emailAlreadyInUse"]
+- ["V5Split10LoginError", "init"]
+- ["V5Split10LoginError", "invalidEmail"]
+- ["V5Split10LoginError", "problemConnecting"]
+- ["V5Split10LoginError", "userNotFound"]
+- ["V5Split10LoginError", "weakPassword"]
+- ["V5Split10LoginError", "wrongPassword"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "characters"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "characters"]
+- ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "characters"]
+- !private ["PSo8NSCoding", "code"]
+- !private ["PSo8NSCoding", "evaluate"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "characters"]
+- !private ["PSo9NSCopying", "code"]
+- !private ["PSo9NSCopying", "evaluate"]
+- ["PSo9NSCopying", "init"]
+- !private ["CSo7NSError", "code"]
+- !private ["PSo16NSMutableCopying", "characters"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "auth"]
+- !private ["CSo8NSObject", "characters"]
+- !private ["CSo8NSObject", "code"]
+- !private ["CSo8NSObject", "createUser"]
+- !private ["CSo8NSObject", "currentUser"]
+- !private ["CSo8NSObject", "evaluate"]
+- !private ["CSo8NSObject", "signIn"]
+- !private ["CSo8NSObject", "signOut"]
+- !private ["CSo8NSObject", "uid"]
+- !private ["PSo16NSObjectProtocol", "auth"]
+- !private ["PSo16NSObjectProtocol", "characters"]
+- !private ["PSo16NSObjectProtocol", "code"]
+- !private ["PSo16NSObjectProtocol", "createUser"]
+- !private ["PSo16NSObjectProtocol", "currentUser"]
+- !private ["PSo16NSObjectProtocol", "evaluate"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "signIn"]
+- !private ["PSo16NSObjectProtocol", "signOut"]
+- !private ["PSo16NSObjectProtocol", "uid"]
+- !private ["CSo11NSPredicate", "evaluate"]
+- !private ["CSo11NSPredicate", "init"]
+- !private ["PSo14NSSecureCoding", "characters"]
+- !private ["PSo14NSSecureCoding", "code"]
+- !private ["PSo14NSSecureCoding", "evaluate"]
+- ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "characters"]
+- ["CSo8NSString", "init"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps16RawRepresentable", "emailAlreadyInUse"]
+- !private ["Ps16RawRepresentable", "init"]
+- !private ["Ps16RawRepresentable", "invalidEmail"]
+- !private ["Ps16RawRepresentable", "userNotFound"]
+- !private ["Ps16RawRepresentable", "wrongPassword"]
+- !private ["Ps8Sequence", "count"]
+- !private ["SS", "characters"]
+- ["SS", "init"]
+- !private ["Ps16TextOutputStream", "characters"]
+- ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "characters"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["CSo4User", "uid"]
+- !private ["PSo8UserInfo", "uid"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "characters"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "characters"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "characters"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "characters"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "characters"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "characters"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "auth"]
+- !private ["Ps9_Hashable", "characters"]
+- !private ["Ps9_Hashable", "code"]
+- !private ["Ps9_Hashable", "createUser"]
+- !private ["Ps9_Hashable", "currentUser"]
+- !private ["Ps9_Hashable", "emailAlreadyInUse"]
+- !private ["Ps9_Hashable", "evaluate"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "invalidEmail"]
+- !private ["Ps9_Hashable", "signIn"]
+- !private ["Ps9_Hashable", "signOut"]
+- !private ["Ps9_Hashable", "uid"]
+- !private ["Ps9_Hashable", "userNotFound"]
+- !private ["Ps9_Hashable", "wrongPassword"]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "characters"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+- !private ["C5Split17supportedColleges", "init"]
+- !private ["C5Split17supportedColleges", "whatCollege"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "CSo4Auth"
+- !private "OSC13AuthErrorCode"
+- "C5Split13Authenticator"
+- !private "Ps23BidirectionalCollection"
+- !private "Sb"
+- "Ps7CVarArg"
+- !private "VSS13CharacterView"
+- !private "Ps10Collection"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "C5Split10DBProvider"
+- "Ps9Equatable"
+- !private "Ps5Error"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "V5Split10LoginError"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "CSo7NSError"
+- "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo11NSPredicate"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps16RawRepresentable"
+- !private "Ps8Sequence"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "CSo4User"
+- !private "PSo8UserInfo"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- "Ps21_ObjectiveCBridgeable"
+- !private "Ps26_RangeReplaceableIndexable"
+- !private "C5Split17supportedColleges"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "3eb6a7ece0a5ed34c096f9f9123bd2a0"

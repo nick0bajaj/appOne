@@ -1,0 +1,203 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DBProvider"
+provides-nominal:
+- "C5Split10DBProvider"
+provides-member:
+- ["C5Split10DBProvider", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Constants"
+- "DBProvider"
+- !private "Database"
+- "DatabaseReference"
+- !private "Dictionary"
+- "String"
+- !private "supportedColleges"
+depends-member:
+- !private ["Ps9AnyObject", "COLLEGES"]
+- !private ["Ps9AnyObject", "Constants"]
+- !private ["Ps9AnyObject", "DATA"]
+- ["Ps9AnyObject", "DBProvider"]
+- !private ["Ps9AnyObject", "Database"]
+- !private ["Ps9AnyObject", "EMAIL"]
+- !private ["Ps9AnyObject", "FIRSTNAME"]
+- !private ["Ps9AnyObject", "ID"]
+- !private ["Ps9AnyObject", "LASTNAME"]
+- !private ["Ps9AnyObject", "PASSWORD"]
+- !private ["Ps9AnyObject", "child"]
+- !private ["Ps9AnyObject", "database"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instance"]
+- !private ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "reference"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "supportedColleges"]
+- !private ["Ps9AnyObject", "userRef"]
+- !private ["Ps9AnyObject", "whatCollege"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps7CVarArg", "child"]
+- !private ["Ps7CVarArg", "database"]
+- !private ["Ps7CVarArg", "reference"]
+- !private ["Ps7CVarArg", "setValue"]
+- !private ["C5Split9Constants", "COLLEGES"]
+- !private ["C5Split9Constants", "DATA"]
+- !private ["C5Split9Constants", "EMAIL"]
+- !private ["C5Split9Constants", "FIRSTNAME"]
+- !private ["C5Split9Constants", "ID"]
+- !private ["C5Split9Constants", "LASTNAME"]
+- !private ["C5Split9Constants", "PASSWORD"]
+- !private ["Ps28CustomDebugStringConvertible", "child"]
+- !private ["Ps28CustomDebugStringConvertible", "database"]
+- !private ["Ps28CustomDebugStringConvertible", "reference"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "child"]
+- !private ["Ps23CustomStringConvertible", "database"]
+- !private ["Ps23CustomStringConvertible", "reference"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["C5Split10DBProvider", "Constants"]
+- ["C5Split10DBProvider", "DBProvider"]
+- !private ["C5Split10DBProvider", "Database"]
+- ["C5Split10DBProvider", "DatabaseReference"]
+- !private ["C5Split10DBProvider", "Dictionary"]
+- ["C5Split10DBProvider", "Instance"]
+- ["C5Split10DBProvider", "String"]
+- ["C5Split10DBProvider", "deinit"]
+- ["C5Split10DBProvider", "init"]
+- !private ["C5Split10DBProvider", "instance"]
+- ["C5Split10DBProvider", "ref"]
+- ["C5Split10DBProvider", "saveUser"]
+- !private ["C5Split10DBProvider", "supportedColleges"]
+- ["C5Split10DBProvider", "updateProfile"]
+- ["C5Split10DBProvider", "userRef"]
+- !private ["CSo8Database", "database"]
+- !private ["CSo8Database", "reference"]
+- !private ["CSo13DatabaseQuery", "child"]
+- !private ["CSo13DatabaseQuery", "setValue"]
+- !private ["CSo17DatabaseReference", "child"]
+- !private ["CSo17DatabaseReference", "setValue"]
+- !private ["Ps9Equatable", "child"]
+- !private ["Ps9Equatable", "database"]
+- !private ["Ps9Equatable", "reference"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps8Hashable", "child"]
+- !private ["Ps8Hashable", "database"]
+- !private ["Ps8Hashable", "reference"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["CSo8NSObject", "child"]
+- !private ["CSo8NSObject", "database"]
+- !private ["CSo8NSObject", "reference"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["PSo16NSObjectProtocol", "child"]
+- !private ["PSo16NSObjectProtocol", "database"]
+- !private ["PSo16NSObjectProtocol", "reference"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["Ps9_Hashable", "child"]
+- !private ["Ps9_Hashable", "database"]
+- !private ["Ps9_Hashable", "reference"]
+- !private ["Ps9_Hashable", "setValue"]
+- !private ["C5Split17supportedColleges", "init"]
+- !private ["C5Split17supportedColleges", "whatCollege"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps7CVarArg"
+- !private "C5Split9Constants"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "C5Split10DBProvider"
+- !private "CSo8Database"
+- !private "CSo13DatabaseQuery"
+- !private "CSo17DatabaseReference"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "Ps9_Hashable"
+- !private "C5Split17supportedColleges"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "b3e61a9f9b797781bf09e65f999d6a45"

@@ -1,0 +1,599 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SignUpViewController"
+provides-nominal:
+- "C5Split20SignUpViewController"
+provides-member:
+- ["C5Split20SignUpViewController", ""]
+provides-dynamic-lookup:
+- "confirmPasswordTextField"
+- "desiredPasswordTextField"
+- "emailAddressTextField"
+- "firstNameTextField"
+- "lastNameTextField"
+- "myPage"
+- "signUpButton"
+- "viewDidLoad"
+depends-top-level:
+- !private "!="
+- "AnyObject"
+- !private "Authenticator"
+- !private "BooleanLiteralType"
+- "SignUpViewController"
+- !private "String"
+- "StringLiteralType"
+- !private "UIAlertAction"
+- !private "UIAlertController"
+- "UITextField"
+- "UIViewController"
+depends-member:
+- !private ["Ps9AnyObject", "Authenticator"]
+- !private ["Ps9AnyObject", "UIAlertAction"]
+- !private ["Ps9AnyObject", "UIAlertController"]
+- !private ["Ps9AnyObject", "addAction"]
+- !private ["Ps9AnyObject", "alertTheUser"]
+- !private ["Ps9AnyObject", "checkEmail"]
+- !private ["Ps9AnyObject", "checkName"]
+- !private ["Ps9AnyObject", "confirmPasswordTextField"]
+- !private ["Ps9AnyObject", "desiredPasswordTextField"]
+- !private ["Ps9AnyObject", "emailAddressTextField"]
+- !private ["Ps9AnyObject", "firstNameTextField"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "lastNameTextField"]
+- !private ["Ps9AnyObject", "myPage"]
+- !private ["Ps9AnyObject", "passwordsPass"]
+- !private ["Ps9AnyObject", "performSegue"]
+- !private ["Ps9AnyObject", "present"]
+- !private ["Ps9AnyObject", "signUp"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["C5Split13Authenticator", "checkEmail"]
+- !private ["C5Split13Authenticator", "checkName"]
+- !private ["C5Split13Authenticator", "init"]
+- !private ["C5Split13Authenticator", "passwordsPass"]
+- !private ["C5Split13Authenticator", "signUp"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["Ps7CVarArg", "Authenticator"]
+- !private ["Ps7CVarArg", "UIAlertAction"]
+- !private ["Ps7CVarArg", "UIAlertController"]
+- !private ["Ps7CVarArg", "addAction"]
+- !private ["Ps7CVarArg", "alertTheUser"]
+- !private ["Ps7CVarArg", "confirmPasswordTextField"]
+- !private ["Ps7CVarArg", "desiredPasswordTextField"]
+- !private ["Ps7CVarArg", "emailAddressTextField"]
+- !private ["Ps7CVarArg", "firstNameTextField"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "lastNameTextField"]
+- !private ["Ps7CVarArg", "myPage"]
+- !private ["Ps7CVarArg", "performSegue"]
+- !private ["Ps7CVarArg", "present"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Authenticator"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
+- !private ["Ps28CustomDebugStringConvertible", "addAction"]
+- !private ["Ps28CustomDebugStringConvertible", "alertTheUser"]
+- !private ["Ps28CustomDebugStringConvertible", "confirmPasswordTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "desiredPasswordTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "emailAddressTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "firstNameTextField"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "lastNameTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "myPage"]
+- !private ["Ps28CustomDebugStringConvertible", "performSegue"]
+- !private ["Ps28CustomDebugStringConvertible", "present"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Authenticator"]
+- !private ["Ps23CustomStringConvertible", "UIAlertAction"]
+- !private ["Ps23CustomStringConvertible", "UIAlertController"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addAction"]
+- !private ["Ps23CustomStringConvertible", "alertTheUser"]
+- !private ["Ps23CustomStringConvertible", "confirmPasswordTextField"]
+- !private ["Ps23CustomStringConvertible", "desiredPasswordTextField"]
+- !private ["Ps23CustomStringConvertible", "emailAddressTextField"]
+- !private ["Ps23CustomStringConvertible", "firstNameTextField"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "lastNameTextField"]
+- !private ["Ps23CustomStringConvertible", "myPage"]
+- !private ["Ps23CustomStringConvertible", "performSegue"]
+- !private ["Ps23CustomStringConvertible", "present"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Authenticator"]
+- !private ["Ps9Equatable", "UIAlertAction"]
+- !private ["Ps9Equatable", "UIAlertController"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addAction"]
+- !private ["Ps9Equatable", "alert"]
+- !private ["Ps9Equatable", "alertTheUser"]
+- !private ["Ps9Equatable", "confirmPasswordTextField"]
+- !private ["Ps9Equatable", "default"]
+- !private ["Ps9Equatable", "desiredPasswordTextField"]
+- !private ["Ps9Equatable", "emailAddressTextField"]
+- !private ["Ps9Equatable", "firstNameTextField"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "lastNameTextField"]
+- !private ["Ps9Equatable", "myPage"]
+- !private ["Ps9Equatable", "performSegue"]
+- !private ["Ps9Equatable", "present"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Authenticator"]
+- !private ["Ps8Hashable", "UIAlertAction"]
+- !private ["Ps8Hashable", "UIAlertController"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addAction"]
+- !private ["Ps8Hashable", "alert"]
+- !private ["Ps8Hashable", "alertTheUser"]
+- !private ["Ps8Hashable", "confirmPasswordTextField"]
+- !private ["Ps8Hashable", "default"]
+- !private ["Ps8Hashable", "desiredPasswordTextField"]
+- !private ["Ps8Hashable", "emailAddressTextField"]
+- !private ["Ps8Hashable", "firstNameTextField"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "lastNameTextField"]
+- !private ["Ps8Hashable", "myPage"]
+- !private ["Ps8Hashable", "performSegue"]
+- !private ["Ps8Hashable", "present"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "Authenticator"]
+- !private ["PSo8NSCoding", "UIAlertAction"]
+- !private ["PSo8NSCoding", "UIAlertController"]
+- !private ["PSo8NSCoding", "addAction"]
+- !private ["PSo8NSCoding", "alertTheUser"]
+- !private ["PSo8NSCoding", "confirmPasswordTextField"]
+- !private ["PSo8NSCoding", "desiredPasswordTextField"]
+- !private ["PSo8NSCoding", "emailAddressTextField"]
+- !private ["PSo8NSCoding", "firstNameTextField"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "lastNameTextField"]
+- !private ["PSo8NSCoding", "myPage"]
+- !private ["PSo8NSCoding", "performSegue"]
+- !private ["PSo8NSCoding", "present"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "Authenticator"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
+- !private ["PSo26NSExtensionRequestHandling", "addAction"]
+- !private ["PSo26NSExtensionRequestHandling", "alertTheUser"]
+- !private ["PSo26NSExtensionRequestHandling", "confirmPasswordTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "desiredPasswordTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "emailAddressTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "firstNameTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "lastNameTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "myPage"]
+- !private ["PSo26NSExtensionRequestHandling", "performSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "present"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Authenticator"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIAlertAction"]
+- !private ["CSo8NSObject", "UIAlertController"]
+- ["CSo8NSObject", "UITextField"]
+- !private ["CSo8NSObject", "addAction"]
+- ["CSo8NSObject", "alertTheUser"]
+- ["CSo8NSObject", "confirmPasswordTextField"]
+- ["CSo8NSObject", "desiredPasswordTextField"]
+- ["CSo8NSObject", "emailAddressTextField"]
+- ["CSo8NSObject", "firstNameTextField"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "lastNameTextField"]
+- ["CSo8NSObject", "myPage"]
+- !private ["CSo8NSObject", "performSegue"]
+- !private ["CSo8NSObject", "present"]
+- ["CSo8NSObject", "signUpButton"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "Authenticator"]
+- !private ["PSo16NSObjectProtocol", "UIAlertAction"]
+- !private ["PSo16NSObjectProtocol", "UIAlertController"]
+- !private ["PSo16NSObjectProtocol", "addAction"]
+- !private ["PSo16NSObjectProtocol", "alertTheUser"]
+- !private ["PSo16NSObjectProtocol", "confirmPasswordTextField"]
+- !private ["PSo16NSObjectProtocol", "desiredPasswordTextField"]
+- !private ["PSo16NSObjectProtocol", "emailAddressTextField"]
+- !private ["PSo16NSObjectProtocol", "firstNameTextField"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "lastNameTextField"]
+- !private ["PSo16NSObjectProtocol", "myPage"]
+- !private ["PSo16NSObjectProtocol", "performSegue"]
+- !private ["PSo16NSObjectProtocol", "present"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- !private ["Ps16RawRepresentable", "alert"]
+- !private ["Ps16RawRepresentable", "default"]
+- ["C5Split20SignUpViewController", "AnyObject"]
+- !private ["C5Split20SignUpViewController", "Authenticator"]
+- !private ["C5Split20SignUpViewController", "String"]
+- !private ["C5Split20SignUpViewController", "UIAlertAction"]
+- !private ["C5Split20SignUpViewController", "UIAlertController"]
+- ["C5Split20SignUpViewController", "UITextField"]
+- !private ["C5Split20SignUpViewController", "alertTheUser"]
+- ["C5Split20SignUpViewController", "confirmPasswordTextField"]
+- ["C5Split20SignUpViewController", "deinit"]
+- ["C5Split20SignUpViewController", "desiredPasswordTextField"]
+- ["C5Split20SignUpViewController", "emailAddressTextField"]
+- ["C5Split20SignUpViewController", "firstNameTextField"]
+- ["C5Split20SignUpViewController", "init"]
+- ["C5Split20SignUpViewController", "lastNameTextField"]
+- ["C5Split20SignUpViewController", "myPage"]
+- !private ["C5Split20SignUpViewController", "performSegue"]
+- !private ["C5Split20SignUpViewController", "present"]
+- ["C5Split20SignUpViewController", "signUpButton"]
+- ["C5Split20SignUpViewController", "viewDidLoad"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "default"]
+- !private ["CSo17UIAlertController", "addAction"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["OSC22UIAlertControllerStyle", "alert"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "Authenticator"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertController"]
+- !private ["PSo21UIAppearanceContainer", "addAction"]
+- !private ["PSo21UIAppearanceContainer", "alertTheUser"]
+- !private ["PSo21UIAppearanceContainer", "confirmPasswordTextField"]
+- !private ["PSo21UIAppearanceContainer", "desiredPasswordTextField"]
+- !private ["PSo21UIAppearanceContainer", "emailAddressTextField"]
+- !private ["PSo21UIAppearanceContainer", "firstNameTextField"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "lastNameTextField"]
+- !private ["PSo21UIAppearanceContainer", "myPage"]
+- !private ["PSo21UIAppearanceContainer", "performSegue"]
+- !private ["PSo21UIAppearanceContainer", "present"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "Authenticator"]
+- !private ["PSo18UIContentContainer", "UIAlertAction"]
+- !private ["PSo18UIContentContainer", "UIAlertController"]
+- !private ["PSo18UIContentContainer", "addAction"]
+- !private ["PSo18UIContentContainer", "alertTheUser"]
+- !private ["PSo18UIContentContainer", "confirmPasswordTextField"]
+- !private ["PSo18UIContentContainer", "desiredPasswordTextField"]
+- !private ["PSo18UIContentContainer", "emailAddressTextField"]
+- !private ["PSo18UIContentContainer", "firstNameTextField"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "lastNameTextField"]
+- !private ["PSo18UIContentContainer", "myPage"]
+- !private ["PSo18UIContentContainer", "performSegue"]
+- !private ["PSo18UIContentContainer", "present"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "text"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "Authenticator"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertController"]
+- !private ["PSo18UIFocusEnvironment", "addAction"]
+- !private ["PSo18UIFocusEnvironment", "alertTheUser"]
+- !private ["PSo18UIFocusEnvironment", "confirmPasswordTextField"]
+- !private ["PSo18UIFocusEnvironment", "desiredPasswordTextField"]
+- !private ["PSo18UIFocusEnvironment", "emailAddressTextField"]
+- !private ["PSo18UIFocusEnvironment", "firstNameTextField"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "lastNameTextField"]
+- !private ["PSo18UIFocusEnvironment", "myPage"]
+- !private ["PSo18UIFocusEnvironment", "performSegue"]
+- !private ["PSo18UIFocusEnvironment", "present"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo10UIKeyInput", "text"]
+- ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "Authenticator"]
+- !private ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIAlertAction"]
+- !private ["CSo11UIResponder", "UIAlertController"]
+- ["CSo11UIResponder", "UITextField"]
+- !private ["CSo11UIResponder", "addAction"]
+- ["CSo11UIResponder", "alertTheUser"]
+- ["CSo11UIResponder", "confirmPasswordTextField"]
+- ["CSo11UIResponder", "desiredPasswordTextField"]
+- ["CSo11UIResponder", "emailAddressTextField"]
+- ["CSo11UIResponder", "firstNameTextField"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "lastNameTextField"]
+- ["CSo11UIResponder", "myPage"]
+- !private ["CSo11UIResponder", "performSegue"]
+- !private ["CSo11UIResponder", "present"]
+- ["CSo11UIResponder", "signUpButton"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "Authenticator"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
+- !private ["PSo30UIResponderStandardEditActions", "addAction"]
+- !private ["PSo30UIResponderStandardEditActions", "alertTheUser"]
+- !private ["PSo30UIResponderStandardEditActions", "confirmPasswordTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "desiredPasswordTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "emailAddressTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "firstNameTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "lastNameTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "myPage"]
+- !private ["PSo30UIResponderStandardEditActions", "performSegue"]
+- !private ["PSo30UIResponderStandardEditActions", "present"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "Authenticator"]
+- !private ["PSo16UIStateRestoring", "UIAlertAction"]
+- !private ["PSo16UIStateRestoring", "UIAlertController"]
+- !private ["PSo16UIStateRestoring", "addAction"]
+- !private ["PSo16UIStateRestoring", "alertTheUser"]
+- !private ["PSo16UIStateRestoring", "confirmPasswordTextField"]
+- !private ["PSo16UIStateRestoring", "desiredPasswordTextField"]
+- !private ["PSo16UIStateRestoring", "emailAddressTextField"]
+- !private ["PSo16UIStateRestoring", "firstNameTextField"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "lastNameTextField"]
+- !private ["PSo16UIStateRestoring", "myPage"]
+- !private ["PSo16UIStateRestoring", "performSegue"]
+- !private ["PSo16UIStateRestoring", "present"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "text"]
+- !private ["PSo18UITraitEnvironment", "Authenticator"]
+- !private ["PSo18UITraitEnvironment", "UIAlertAction"]
+- !private ["PSo18UITraitEnvironment", "UIAlertController"]
+- !private ["PSo18UITraitEnvironment", "addAction"]
+- !private ["PSo18UITraitEnvironment", "alertTheUser"]
+- !private ["PSo18UITraitEnvironment", "confirmPasswordTextField"]
+- !private ["PSo18UITraitEnvironment", "desiredPasswordTextField"]
+- !private ["PSo18UITraitEnvironment", "emailAddressTextField"]
+- !private ["PSo18UITraitEnvironment", "firstNameTextField"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "lastNameTextField"]
+- !private ["PSo18UITraitEnvironment", "myPage"]
+- !private ["PSo18UITraitEnvironment", "performSegue"]
+- !private ["PSo18UITraitEnvironment", "present"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "Authenticator"]
+- !private ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "UIAlertAction"]
+- !private ["CSo16UIViewController", "UIAlertController"]
+- ["CSo16UIViewController", "UITextField"]
+- !private ["CSo16UIViewController", "addAction"]
+- ["CSo16UIViewController", "alertTheUser"]
+- ["CSo16UIViewController", "confirmPasswordTextField"]
+- ["CSo16UIViewController", "desiredPasswordTextField"]
+- ["CSo16UIViewController", "emailAddressTextField"]
+- ["CSo16UIViewController", "firstNameTextField"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "lastNameTextField"]
+- ["CSo16UIViewController", "myPage"]
+- !private ["CSo16UIViewController", "performSegue"]
+- !private ["CSo16UIViewController", "present"]
+- ["CSo16UIViewController", "signUpButton"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Authenticator"]
+- !private ["Ps9_Hashable", "UIAlertAction"]
+- !private ["Ps9_Hashable", "UIAlertController"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "addAction"]
+- !private ["Ps9_Hashable", "alert"]
+- !private ["Ps9_Hashable", "alertTheUser"]
+- !private ["Ps9_Hashable", "confirmPasswordTextField"]
+- !private ["Ps9_Hashable", "default"]
+- !private ["Ps9_Hashable", "desiredPasswordTextField"]
+- !private ["Ps9_Hashable", "emailAddressTextField"]
+- !private ["Ps9_Hashable", "firstNameTextField"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "lastNameTextField"]
+- !private ["Ps9_Hashable", "myPage"]
+- !private ["Ps9_Hashable", "performSegue"]
+- !private ["Ps9_Hashable", "present"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "C5Split13Authenticator"
+- !private "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- !private "Ps16RawRepresentable"
+- "C5Split20SignUpViewController"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo13UIAlertAction"
+- !private "OSC18UIAlertActionStyle"
+- !private "CSo17UIAlertController"
+- !private "OSC22UIAlertControllerStyle"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "d540d96f395fe962b207ec5af8a1cfd5"

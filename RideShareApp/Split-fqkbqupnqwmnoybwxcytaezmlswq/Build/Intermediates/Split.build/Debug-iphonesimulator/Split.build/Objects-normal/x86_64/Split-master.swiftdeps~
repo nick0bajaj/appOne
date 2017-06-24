@@ -1,0 +1,18 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "312e226bba74012121e711e2b4c0d65d"
+build_time: [551581693, 997133000]
+inputs:
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/DBProvider.swift": [551135973, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/myPageViewController.swift": [550978930, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/Authenticator.swift": [550979105, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/editPageViewController.swift": [9223372036854775807, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/mainPageViewController.swift": [550613750, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/supportedColleges.swift": [550979105, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/Constants.swift": [550905044, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/usersPageViewController.swift": [551581673, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/SignInViewController.swift": [550614134, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/postTripViewController.swift": [551141180, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/AppDelegate.swift": [550109603, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/SignUpViewController.swift": [550905712, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/menuViewController.swift": [550899270, 0]
+  "/Users/nickbajaj/Documents/Projects/AppIdeaOne/AppIdeaOne/setUpProfile.swift": [550979105, 0]

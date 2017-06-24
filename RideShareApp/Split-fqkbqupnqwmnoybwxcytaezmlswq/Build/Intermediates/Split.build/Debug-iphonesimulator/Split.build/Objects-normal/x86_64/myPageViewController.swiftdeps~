@@ -1,0 +1,435 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "myPageViewController"
+provides-nominal:
+- "C5Split20myPageViewController"
+provides-member:
+- ["C5Split20myPageViewController", ""]
+provides-dynamic-lookup:
+- "aboutMeTextField"
+- "completedButton"
+- "editProfilePicture"
+- "emailAddressLabel"
+- "nextSegue"
+- "phoneNumberTextField"
+- "profilePicture"
+- "titleName"
+- "viewDidLoad"
+depends-top-level:
+- "StringLiteralType"
+- "UIImageView"
+- "UILabel"
+- "UITextField"
+- "UIViewController"
+- "myPageViewController"
+- "setUpProfile"
+depends-member:
+- !private ["Ps9AnyObject", "aboutMeTextField"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "nextSegue"]
+- !private ["Ps9AnyObject", "performSegue"]
+- !private ["Ps9AnyObject", "phoneNumberTextField"]
+- !private ["Ps9AnyObject", "profileCreator"]
+- ["Ps9AnyObject", "setUpProfile"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "uploadData"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["Ps7CVarArg", "aboutMeTextField"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "nextSegue"]
+- !private ["Ps7CVarArg", "performSegue"]
+- !private ["Ps7CVarArg", "phoneNumberTextField"]
+- !private ["Ps7CVarArg", "profileCreator"]
+- ["Ps7CVarArg", "setUpProfile"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "aboutMeTextField"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "nextSegue"]
+- !private ["Ps28CustomDebugStringConvertible", "performSegue"]
+- !private ["Ps28CustomDebugStringConvertible", "phoneNumberTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "profileCreator"]
+- ["Ps28CustomDebugStringConvertible", "setUpProfile"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "aboutMeTextField"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "nextSegue"]
+- !private ["Ps23CustomStringConvertible", "performSegue"]
+- !private ["Ps23CustomStringConvertible", "phoneNumberTextField"]
+- !private ["Ps23CustomStringConvertible", "profileCreator"]
+- ["Ps23CustomStringConvertible", "setUpProfile"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "aboutMeTextField"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "nextSegue"]
+- !private ["Ps9Equatable", "performSegue"]
+- !private ["Ps9Equatable", "phoneNumberTextField"]
+- !private ["Ps9Equatable", "profileCreator"]
+- ["Ps9Equatable", "setUpProfile"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "aboutMeTextField"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "nextSegue"]
+- !private ["Ps8Hashable", "performSegue"]
+- !private ["Ps8Hashable", "phoneNumberTextField"]
+- !private ["Ps8Hashable", "profileCreator"]
+- ["Ps8Hashable", "setUpProfile"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "aboutMeTextField"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "nextSegue"]
+- !private ["PSo8NSCoding", "performSegue"]
+- !private ["PSo8NSCoding", "phoneNumberTextField"]
+- !private ["PSo8NSCoding", "profileCreator"]
+- ["PSo8NSCoding", "setUpProfile"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "aboutMeTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "nextSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "performSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "phoneNumberTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "profileCreator"]
+- ["PSo26NSExtensionRequestHandling", "setUpProfile"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "aboutMeTextField"]
+- ["CSo8NSObject", "completedButton"]
+- ["CSo8NSObject", "editProfilePicture"]
+- ["CSo8NSObject", "emailAddressLabel"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "nextSegue"]
+- !private ["CSo8NSObject", "performSegue"]
+- ["CSo8NSObject", "phoneNumberTextField"]
+- ["CSo8NSObject", "profileCreator"]
+- ["CSo8NSObject", "profilePicture"]
+- ["CSo8NSObject", "setUpProfile"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "titleName"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "aboutMeTextField"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "nextSegue"]
+- !private ["PSo16NSObjectProtocol", "performSegue"]
+- !private ["PSo16NSObjectProtocol", "phoneNumberTextField"]
+- !private ["PSo16NSObjectProtocol", "profileCreator"]
+- ["PSo16NSObjectProtocol", "setUpProfile"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "aboutMeTextField"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "nextSegue"]
+- !private ["PSo21UIAppearanceContainer", "performSegue"]
+- !private ["PSo21UIAppearanceContainer", "phoneNumberTextField"]
+- !private ["PSo21UIAppearanceContainer", "profileCreator"]
+- ["PSo21UIAppearanceContainer", "setUpProfile"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "aboutMeTextField"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "nextSegue"]
+- !private ["PSo18UIContentContainer", "performSegue"]
+- !private ["PSo18UIContentContainer", "phoneNumberTextField"]
+- !private ["PSo18UIContentContainer", "profileCreator"]
+- ["PSo18UIContentContainer", "setUpProfile"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "text"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "aboutMeTextField"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "nextSegue"]
+- !private ["PSo18UIFocusEnvironment", "performSegue"]
+- !private ["PSo18UIFocusEnvironment", "phoneNumberTextField"]
+- !private ["PSo18UIFocusEnvironment", "profileCreator"]
+- ["PSo18UIFocusEnvironment", "setUpProfile"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo10UIKeyInput", "text"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "aboutMeTextField"]
+- ["CSo11UIResponder", "completedButton"]
+- ["CSo11UIResponder", "editProfilePicture"]
+- ["CSo11UIResponder", "emailAddressLabel"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "nextSegue"]
+- !private ["CSo11UIResponder", "performSegue"]
+- ["CSo11UIResponder", "phoneNumberTextField"]
+- ["CSo11UIResponder", "profileCreator"]
+- ["CSo11UIResponder", "profilePicture"]
+- ["CSo11UIResponder", "setUpProfile"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "titleName"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "aboutMeTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "nextSegue"]
+- !private ["PSo30UIResponderStandardEditActions", "performSegue"]
+- !private ["PSo30UIResponderStandardEditActions", "phoneNumberTextField"]
+- !private ["PSo30UIResponderStandardEditActions", "profileCreator"]
+- ["PSo30UIResponderStandardEditActions", "setUpProfile"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "aboutMeTextField"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "nextSegue"]
+- !private ["PSo16UIStateRestoring", "performSegue"]
+- !private ["PSo16UIStateRestoring", "phoneNumberTextField"]
+- !private ["PSo16UIStateRestoring", "profileCreator"]
+- ["PSo16UIStateRestoring", "setUpProfile"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "text"]
+- !private ["PSo18UITraitEnvironment", "aboutMeTextField"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "nextSegue"]
+- !private ["PSo18UITraitEnvironment", "performSegue"]
+- !private ["PSo18UITraitEnvironment", "phoneNumberTextField"]
+- !private ["PSo18UITraitEnvironment", "profileCreator"]
+- ["PSo18UITraitEnvironment", "setUpProfile"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "UIImageView"]
+- ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "aboutMeTextField"]
+- ["CSo16UIViewController", "completedButton"]
+- ["CSo16UIViewController", "editProfilePicture"]
+- ["CSo16UIViewController", "emailAddressLabel"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "nextSegue"]
+- !private ["CSo16UIViewController", "performSegue"]
+- ["CSo16UIViewController", "phoneNumberTextField"]
+- ["CSo16UIViewController", "profileCreator"]
+- ["CSo16UIViewController", "profilePicture"]
+- ["CSo16UIViewController", "setUpProfile"]
+- ["CSo16UIViewController", "titleName"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "aboutMeTextField"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "nextSegue"]
+- !private ["Ps9_Hashable", "performSegue"]
+- !private ["Ps9_Hashable", "phoneNumberTextField"]
+- !private ["Ps9_Hashable", "profileCreator"]
+- ["Ps9_Hashable", "setUpProfile"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- ["C5Split20myPageViewController", "UIImageView"]
+- ["C5Split20myPageViewController", "UILabel"]
+- ["C5Split20myPageViewController", "UITextField"]
+- ["C5Split20myPageViewController", "aboutMeTextField"]
+- ["C5Split20myPageViewController", "completedButton"]
+- ["C5Split20myPageViewController", "deinit"]
+- ["C5Split20myPageViewController", "editProfilePicture"]
+- ["C5Split20myPageViewController", "emailAddressLabel"]
+- ["C5Split20myPageViewController", "init"]
+- ["C5Split20myPageViewController", "nextSegue"]
+- !private ["C5Split20myPageViewController", "performSegue"]
+- ["C5Split20myPageViewController", "phoneNumberTextField"]
+- ["C5Split20myPageViewController", "profileCreator"]
+- ["C5Split20myPageViewController", "profilePicture"]
+- ["C5Split20myPageViewController", "setUpProfile"]
+- ["C5Split20myPageViewController", "titleName"]
+- ["C5Split20myPageViewController", "viewDidLoad"]
+- ["C5Split12setUpProfile", "init"]
+- !private ["C5Split12setUpProfile", "uploadData"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+- "C5Split20myPageViewController"
+- "C5Split12setUpProfile"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/nickbajaj/Documents/Projects/AppIdeaOne/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "3219008a4bf58fa58e60724a33919cd1"
