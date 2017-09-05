@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+
 
 class postTripViewController: UIViewController {
 
     @IBOutlet weak var pickUp: UITextField!
-    
     
     @IBOutlet weak var destination: UITextField!
     
@@ -29,11 +31,20 @@ class postTripViewController: UIViewController {
     
     @IBOutlet weak var driverButton: UIButton!
     
+    var isRider = "True"
+    
+    var userRef: DatabaseReference {
+        
+        return Database.database().reference().child(Constants.ID)
+        
+    }
+    
     @IBAction func isRider(_ sender: Any) {
         riderButton.titleLabel!.font = UIFont(name: "Futura-Bold", size: 17.0)
         riderButton.setTitle("Rider", for: UIControlState.selected)
         driverButton.titleLabel!.font = UIFont(name: "Futura-Medium", size: 17.0)
         driverButton.setTitle("Driver", for: UIControlState.normal)
+        isRider = "True"
     }
     
     @IBAction func isDriver(_ sender: Any) {
@@ -41,11 +52,29 @@ class postTripViewController: UIViewController {
         driverButton.setTitle("Driver", for: UIControlState.selected)
         riderButton.titleLabel!.font = UIFont(name: "Futura-Medium", size: 17.0)
         riderButton.setTitle("Rider", for: UIControlState.normal)
+        isRider = "False"
     }
     
     @IBAction func createTrip(_ sender: Any) {
+        getTrips()
     }
     
+    private func getTrips() {
+        print("Trips Retrieved")
+        var drivable = "False"
+        if (self.canDrive.isOn) {
+            drivable = "True"
+        }
+        DBProvider.Instance.uploadTrips(Location: Constants.MONTH, Value: self.month.text!)
+        DBProvider.Instance.uploadTrips(Location: Constants.DAY, Value: self.day.text!)
+        DBProvider.Instance.uploadTrips(Location: Constants.YEAR, Value: self.year.text!)
+        DBProvider.Instance.uploadTrips(Location: Constants.DRIVABLE, Value: drivable)
+        DBProvider.Instance.uploadTrips(Location: Constants.ISRIDER, Value: self.isRider)
+        DBProvider.Instance.uploadTrips(Location: Constants.EXTRAINFO, Value: self.extraInfo.text!)
+        DBProvider.Instance.uploadTrips(Location: Constants.FROMADDRESS, Value: self.pickUp.text!)
+        DBProvider.Instance.uploadTrips(Location: Constants.DESTINATIONADDRESS, Value: self.destination.text!)
+
+    }
     
     
     override func viewDidLoad() {

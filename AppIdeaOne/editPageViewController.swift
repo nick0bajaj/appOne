@@ -7,51 +7,116 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
-class editPageViewController: UIViewController {
+class editPageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         
     let profileCreator = setUpProfile()
     
     let db = DBProvider()
     
+    let profileCreatedSegue = "profileCreatedSegue"
     
-    @IBAction func profileButton(_ sender: Any) {
-    }
     
-    var backSegue = "profileCreatedSegue"
-
     @IBOutlet weak var myName: UILabel!
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBOutlet weak var emailTextField: UILabel!
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
-    @IBOutlet weak var aboutMeTextField: UITextField!
+    @IBOutlet weak var aboutMeTextField: UITextView!
     
     @IBAction func completedButton(_ sender: Any) {
-        db.uploadInfo(Location: Constants.PHONENUMBER, Value: phoneNumberTextField.text!)
-        db.uploadInfo(Location: Constants.ABOUTME, Value: aboutMeTextField.text!)
-        self.performSegue(withIdentifier: self.backSegue, sender: nil)
+        db.updateProfile(number: phoneNumberTextField.text!, aboutMe: aboutMeTextField.text!)
+        self.performSegue(withIdentifier: self.profileCreatedSegue, sender: nil)
+        db.uploadImage(profileImageView.image!, completionBlock: {(fileURL, errorMessage) in
+            print(fileURL ?? "Could not find fileURL")
+            print(errorMessage ?? "Could not find errorMessage")
+        })
     }
     
-    
-    @IBAction func backButton(_ sender: Any) {
-        self.performSegue(withIdentifier: self.backSegue, sender: nil)
-    }
 
     
     @IBAction func editProfilePicture(_ sender: Any) {
         //profileCreator.swapPhoto(profilePicture)
     }
     
+    @IBAction func changePhotoButton(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+//        image.sourceType = UIImagePickerControllerSourceType.camera
+        image.allowsEditing = false
+        self.present(image, animated: true) {
+            
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            profileImageView.image = image
+        } else {
+            //error message
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    var ref: DatabaseReference {
+        
+        return Database.database().reference()
+        
+    }
+    
+    var userRef : DatabaseReference {
+        return ref.child(Constants.ID)
+    }
+    
+    func setLabels(){
+        userRef.child(DBProvider.Instance.id!).observeSingleEvent(of: .value, with: {
+            snapshot in
+            if let items = snapshot.value as? [String:String]{
+                let aboutMe = items[Constants.ABOUTME]
+                if aboutMe == "" || aboutMe == "About Me"{
+                    self.aboutMeTextField.text = "About Me"
+                    self.aboutMeTextField.textColor = UIColor.lightGray
+                    self.aboutMeTextField.font = UIFont(name: "FuturaMedium", size: 17)
+                    self.aboutMeTextField.clearsOnInsertion = true
+                }
+                self.emailTextField.text = items[Constants.EMAIL]
+                self.phoneNumberTextField.text = items[Constants.PHONENUMBER]
+                let fn = items[Constants.FIRSTNAME]?.uppercased()
+                let ln = items[Constants.LASTNAME]?.uppercased()
+                self.myName.text = fn! + " " + ln!
+            }
+        })
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        if self.aboutMeTextField.text == "About Me"{
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func createBorders(){
+        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+        emailTextField.layer.borderWidth = 0.5
+        emailTextField.layer.cornerRadius = 8
+        aboutMeTextField.layer.borderColor = UIColor.lightGray.cgColor
+        aboutMeTextField.layer.borderWidth = 0.5
+        aboutMeTextField.layer.cornerRadius = 8
+        phoneNumberTextField.layer.borderColor = UIColor.lightGray.cgColor
+        phoneNumberTextField.layer.borderWidth = 0.5
+        phoneNumberTextField.layer.cornerRadius = 8
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstName = db.retrieveInfo(Location: Constants.FIRSTNAME)
-        let lastName = db.retrieveInfo(Location: Constants.LASTNAME)
-        myName.text = firstName + " " + lastName
-        emailTextField.text = db.retrieveInfo(Location: Constants.EMAIL)
-        phoneNumberTextField.text = db.retrieveInfo(Location: Constants.PHONENUMBER)
-        aboutMeTextField.text = db.retrieveInfo(Location: Constants.ABOUTME)
-        emailTextField.isUserInteractionEnabled = false
+        createBorders()
+        setLabels()
     }
 }

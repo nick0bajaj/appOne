@@ -1,22 +1,64 @@
-upload data when user creates profile
 
-Main Page: create social page that shows everyones Trips. Filer by your trip, filter by drivers/riders, prioritize friends and same school and nearest out of the way
-        Should show distance out of way, other users destination, date of trip, total trip time
+Marketing
+    Terms and conditions
 
-Clicking on table View on main page: should bring you to trip info page (Need to create) includes things like send message, request join, isTripStillOpen?, links to users profiles
+    Database rules - read/write
 
-create userProfile with friend button and chat button
+    Advertising our product
 
-create chat
+    Advertising to gain money
 
-create icon
+Design
+    Come up with name
 
-add view friends under menu
+    Create logo
 
-Complete Trip Page
-    give users revies & add review to sorting
+    Remake images
 
-come up with name
+    Should work on all devices
 
-make compatible with other iphones 
+    Keyboard shortcuts, 'Done' should click buttons, there should be a next, minimize keyboard
+
+
+Account Info
+    Logout/Forgot Password/Change password/Deactivate account?/
+
+Creating account
+    Connect with Facebook
+
+    Add friends from facebook to users friends in app
+
+    Verify Email when setting up
+
+Profile
+    Include option to add other users as friends
+
+    User Reviews
+
+Wall
+    Figure out a way to traverse your database and organize posts from your friends, other students
+
+    Include search button to search for other users or add them as a friend: search by name, email, or search for groups
+
+    You can also search your wall for trips going to a nearby location.
+
+    Is trip closed?
+
+Create Trip/Trips Page
+    *All members within the trip are admins**
+
+    Only pick up riders who are at your school/friends with you
+
+    Your trips page would include members with links to their profile and show drop off location.  Your trips page will give the option to boot members, show map view, chat, change the title (must have a unique title when creating trip), request join, leave group, show suggested riders.
+
+Finished Trip
+    Give user reviews
+
+Menu
+    Friends List
+    Create Chat
+
+
+
+
 

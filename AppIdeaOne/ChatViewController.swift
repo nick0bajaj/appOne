@@ -1,14 +1,14 @@
 //
-//  mainPageViewController.swift
+//  ChatViewController.swift
 //  Split
 //
-//  Created by Nikhil Bajaj on 6/12/17.
+//  Created by Nikhil Bajaj on 7/19/17.
 //  Copyright © 2017 NickBajaj. All rights reserved.
 //
 
 import UIKit
 
-class mainPageViewController: UIViewController {
+class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
