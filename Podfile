@@ -10,4 +10,5 @@ target 'Split' do
     pod 'Firebase/Storage'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
+    pod 'GooglePlaces'
 end
