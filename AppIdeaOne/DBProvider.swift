@@ -78,44 +78,4 @@ class DBProvider {
         }
         userRef.child(self.id!).child(Location).setValue(data)
     }
-    
-    func uploadTrips(Location: String, Value: String) {
-        userRef.child(self.id!).observeSingleEvent(of: .value, with: {
-            snapshot in
-            print(snapshot.value ?? "Could not print snapshot.value")
-            if let items = snapshot.value as? [String:String]{
-                if items[Constants.TRIPS] != nil {
-                    self.userRef.child(self.id!).observeSingleEvent(of: .value, with: {
-                        snapshot in
-                        if let allTrips = snapshot.value as? [String:String]{
-                            let numberOfTrips : Int = allTrips.keys.count//this line not working, count returns (function)
-                            print("All Trips is: \(allTrips)")
-                            print("The number of trips is: \(numberOfTrips)")
-                            self.userRef.child(self.id!).child(Constants.TRIPS).child("\(numberOfTrips)").child(Location).setValue(Value)
-                        } else {
-                            print("Could not set AllTrips - uploadTrips()")
-                        }
-                    })
-                } else {
-                    print("No Previous Trips - UploadTrips()")
-                    self.userRef.child(self.id!).child(Constants.TRIPS).child("0").child(Location).setValue(Value)
-                }
-                self.userRef.child(self.id!).child(Constants.TRIPS).child("\(index)").child(Location).setValue(Value)
-            } else {
-                print("Couldnt get Trips - in uploadTrips - DBProvider.swift ")
-            }
-        })
-    }
-    
-
-    
-
-//    func deleteTrip(){
-//        
-//    }
-
-    
-//    func deleteAccount(){
-//        
-//    }
 }

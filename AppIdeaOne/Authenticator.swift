@@ -94,7 +94,7 @@ class Authenticator {
             return "Please confirm your password"
         } else if (firstPassword != secondPassword){
             return "Passwords don't match"
-        } else if !(firstPassword.characters.count >= 9){
+        } else if !(firstPassword.count >= 9){
             return "Password must be at least 9 characters"
         } else if (!hasDigit){
             return "Password must contains a digit"

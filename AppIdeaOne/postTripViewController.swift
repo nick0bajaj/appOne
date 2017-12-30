@@ -8,14 +8,53 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseDatabase
+import GooglePlaces
+import MapKit
+import CoreLocation
 
-
-class postTripViewController: UIViewController {
-
-    @IBOutlet weak var pickUp: UITextField!
+class postTripViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     
-    @IBOutlet weak var destination: UITextField!
+    var departureAddressClicked = false
+    
+    @IBOutlet weak var departureAddressText: UIButton!
+    
+    @IBOutlet weak var destinationAddressText: UIButton!
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: \(place.name)")
+        print("Place address: \(String(describing: place.formattedAddress))")
+        print("Place attributions: \(String(describing: place.attributions))")
+        viewController.dismiss(animated: true, completion: nil)
+        if(departureAddressClicked){
+            departureAddressText.setTitle(place.name, for: .normal)
+            departureAddressClicked = false
+        } else {
+            destinationAddressText.setTitle(place.name, for: .normal)
+        }
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+        
+    }
+    
+//    func changeDepartureAddressText(String: text){
+//        depart
+//    }
     
     @IBOutlet weak var month: UITextField!
     
@@ -33,12 +72,6 @@ class postTripViewController: UIViewController {
     
     var isRider = "True"
     
-    var userRef: DatabaseReference {
-        
-        return Database.database().reference().child(Constants.ID)
-        
-    }
-    
     @IBAction func isRider(_ sender: Any) {
         riderButton.titleLabel!.font = UIFont(name: "Futura-Bold", size: 17.0)
         riderButton.setTitle("Rider", for: UIControlState.selected)
@@ -55,32 +88,26 @@ class postTripViewController: UIViewController {
         isRider = "False"
     }
     
+    @IBAction func departureAddressButton(_ sender: UIButton) {
+        departureAddressClicked = true
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func destinationAddressButton(_ sender: UIButton) {
+        departureAddressClicked = false
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     @IBAction func createTrip(_ sender: Any) {
-        getTrips()
     }
-    
-    private func getTrips() {
-        print("Trips Retrieved")
-        var drivable = "False"
-        if (self.canDrive.isOn) {
-            drivable = "True"
-        }
-        DBProvider.Instance.uploadTrips(Location: Constants.MONTH, Value: self.month.text!)
-        DBProvider.Instance.uploadTrips(Location: Constants.DAY, Value: self.day.text!)
-        DBProvider.Instance.uploadTrips(Location: Constants.YEAR, Value: self.year.text!)
-        DBProvider.Instance.uploadTrips(Location: Constants.DRIVABLE, Value: drivable)
-        DBProvider.Instance.uploadTrips(Location: Constants.ISRIDER, Value: self.isRider)
-        DBProvider.Instance.uploadTrips(Location: Constants.EXTRAINFO, Value: self.extraInfo.text!)
-        DBProvider.Instance.uploadTrips(Location: Constants.FROMADDRESS, Value: self.pickUp.text!)
-        DBProvider.Instance.uploadTrips(Location: Constants.DESTINATIONADDRESS, Value: self.destination.text!)
-
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
 }
