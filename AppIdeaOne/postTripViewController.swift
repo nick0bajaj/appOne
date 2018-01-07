@@ -16,20 +16,43 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     
     var departureAddressClicked = false
     
-    @IBOutlet weak var departureAddressText: UIButton!
+    @IBOutlet weak var departureAddressButton: UIButton!
     
-    @IBOutlet weak var destinationAddressText: UIButton!
+    @IBOutlet weak var destinationAddressButton: UIButton!
+    
+    private func alertTheUser(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func isValidAddress(button: UIButton) -> Bool{
+        switch button.currentTitle! {
+        case "":
+            self.alertTheUser(title: "Problem with Depature Address", message: "Depature address cannot be blank")
+            return false
+        case "Enter Depature Address Here":
+            self.alertTheUser(title: "Problem with Depature Address", message: "Must enter valid depature address")
+            return false
+        case "Enter Destination Address Here":
+            self.alertTheUser(title: "Problem with Depature Address", message: "Must enter valid depature address")
+            return false
+        default:
+            return true
+        }
+    }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Place name: \(place.name)")
-        print("Place address: \(String(describing: place.formattedAddress))")
-        print("Place attributions: \(String(describing: place.attributions))")
+//        print("Place name: \(place.name)")
+//        print("Place address: \(String(describing: place.formattedAddress))")
+//        print("Place attributions: \(String(describing: place.attributions))")
         viewController.dismiss(animated: true, completion: nil)
         if(departureAddressClicked){
-            departureAddressText.setTitle(place.name, for: .normal)
+            departureAddressButton.setTitle(place.formattedAddress, for: .normal)
             departureAddressClicked = false
         } else {
-            destinationAddressText.setTitle(place.name, for: .normal)
+            destinationAddressButton.setTitle(place.formattedAddress, for: .normal)
         }
     }
     
@@ -52,41 +75,15 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
         
     }
     
-//    func changeDepartureAddressText(String: text){
-//        depart
-//    }
-    
     @IBOutlet weak var month: UITextField!
     
     @IBOutlet weak var day: UITextField!
     
     @IBOutlet weak var year: UITextField!
     
-    @IBOutlet weak var canDrive: UISwitch!
+    @IBOutlet weak var hasCar: UISwitch!
     
     @IBOutlet weak var extraInfo: UITextField!
-    
-    @IBOutlet weak var riderButton: UIButton!
-    
-    @IBOutlet weak var driverButton: UIButton!
-    
-    var isRider = "True"
-    
-    @IBAction func isRider(_ sender: Any) {
-        riderButton.titleLabel!.font = UIFont(name: "Futura-Bold", size: 17.0)
-        riderButton.setTitle("Rider", for: UIControlState.selected)
-        driverButton.titleLabel!.font = UIFont(name: "Futura-Medium", size: 17.0)
-        driverButton.setTitle("Driver", for: UIControlState.normal)
-        isRider = "True"
-    }
-    
-    @IBAction func isDriver(_ sender: Any) {
-        driverButton.titleLabel!.font = UIFont(name: "Futura-Bold", size: 17.0)
-        driverButton.setTitle("Driver", for: UIControlState.selected)
-        riderButton.titleLabel!.font = UIFont(name: "Futura-Medium", size: 17.0)
-        riderButton.setTitle("Rider", for: UIControlState.normal)
-        isRider = "False"
-    }
     
     @IBAction func departureAddressButton(_ sender: UIButton) {
         departureAddressClicked = true
@@ -104,6 +101,18 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     }
     
     @IBAction func createTrip(_ sender: Any) {
+        if(isValidAddress(button: destinationAddressButton) && isValidAddress(button: departureAddressButton)){
+            let trip : [String: AnyObject] =
+                [Constants.MONTH : month.text! as AnyObject,
+                 Constants.DAY : day.text! as AnyObject,
+                 Constants.YEAR : year.text! as AnyObject,
+                 Constants.HASCAR : hasCar.isOn as AnyObject,
+                 Constants.EXTRAINFO : extraInfo.text! as AnyObject,
+                 Constants.DEPARTUREADDRESS : departureAddressButton.currentTitle! as AnyObject,
+                 Constants.DESTINATIONADDRESS : destinationAddressButton.currentTitle! as AnyObject]
+            let dbp = DBProvider()
+            dbp.uploadTrip(trip: trip)
+        }
     }
     
     override func viewDidLoad() {

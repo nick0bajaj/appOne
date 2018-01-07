@@ -44,7 +44,6 @@ class DBProvider {
         uploadInfo(Location: Constants.PASSWORD, Value: password)
         uploadInfo(Location: Constants.PHONENUMBER, Value: "")
         uploadInfo(Location: Constants.ABOUTME, Value: "")
-        
     }
     
     func uploadImage(_ image: UIImage, completionBlock: @escaping (_ url: URL?, _ errorMessage: String?) -> Void){
@@ -77,5 +76,9 @@ class DBProvider {
             data = Value.lowercased()
         }
         userRef.child(self.id!).child(Location).setValue(data)
+    }
+    
+    func uploadTrip(trip : [String : AnyObject]){
+        
     }
 }
