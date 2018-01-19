@@ -25,12 +25,12 @@ class DBProvider {
     
     var userRef: DatabaseReference {
     
-        return Database.database().reference().child(Constants.ID)
+        return Database.database().reference().child("users").child(Constants.ID)
     
     }
     
     var userStorageRef: StorageReference {
-        return Storage.storage().reference().child(Constants.ID)
+        return Storage.storage().reference().child("users").child(Constants.ID)
     }
     
     
@@ -78,7 +78,8 @@ class DBProvider {
         userRef.child(self.id!).child(Location).setValue(data)
     }
     
-    func uploadTrip(trip : [String : AnyObject]){
+    func uploadTrip(trip : [String : AnyObject]) {
         
+        userRef.child(self.id!).child(Constants.TRIPS).childByAutoId().setValue(trip)
     }
 }

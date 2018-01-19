@@ -11,6 +11,7 @@ import FirebaseAuth
 import GooglePlaces
 import MapKit
 import CoreLocation
+import FirebaseFirestore
 
 class postTripViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     

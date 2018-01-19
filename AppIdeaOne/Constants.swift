@@ -18,6 +18,7 @@ class Constants {
     static let PASSWORD = "password"
     static let FIRSTNAME = "firstName"
     static let LASTNAME = "lastName"
+    static let TRIPS = "trips"
     static let DEPARTUREADDRESS = "departureAddress"
     static let DESTINATIONADDRESS = "destinationAddress"
     static let MONTH = "month"
