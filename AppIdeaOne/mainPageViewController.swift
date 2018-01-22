@@ -12,11 +12,9 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    let list = ["Milk", "Honey", "Bread", "Tomatoes"]
+    private let list = ["Milk", "Honey", "Bread", "Tomatoes"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return list.count

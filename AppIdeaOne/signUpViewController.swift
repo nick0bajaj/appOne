@@ -11,6 +11,12 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
@@ -22,7 +28,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var lastNameTextField: UITextField!
     
-    let myPage = "editPageSegue"
+    private let myPage = "editPageSegue"
     
     @IBAction func signUpButton(_ sender: AnyObject) {
         let auth = Authenticator()
@@ -51,18 +57,10 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     private func alertTheUser(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
-
 }

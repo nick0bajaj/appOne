@@ -11,13 +11,26 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class editPageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createBorders()
+        setLabels()
+    }
         
-    let profileCreator = setUpProfile()
+    private let profileCreator = setUpProfile()
     
-    let db = DBProvider()
+    private let db = DBProvider()
     
-    let profileCreatedSegue = "profileCreatedSegue"
+    private let profileCreatedSegue = "profileCreatedSegue"
     
+    private var ref: DatabaseReference {
+        return Database.database().reference()
+    }
+    
+    private var userRef : DatabaseReference {
+        return ref.child(Constants.ID)
+    }
     
     @IBOutlet weak var myName: UILabel!
 
@@ -37,8 +50,6 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
             print(errorMessage ?? "Could not find errorMessage")
         })
     }
-    
-
     
     @IBAction func editProfilePicture(_ sender: Any) {
         //profileCreator.swapPhoto(profilePicture)
@@ -64,17 +75,15 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.dismiss(animated: true, completion: nil)
     }
     
-    var ref: DatabaseReference {
-        
-        return Database.database().reference()
-        
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        if self.aboutMeTextField.text == "About Me"{
+            return true
+        }else {
+            return false
+        }
     }
     
-    var userRef : DatabaseReference {
-        return ref.child(Constants.ID)
-    }
-    
-    func setLabels(){
+    private func setLabels(){
         userRef.child(DBProvider.Instance.id!).observeSingleEvent(of: .value, with: {
             snapshot in
             if let items = snapshot.value as? [String:String]{
@@ -94,15 +103,7 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
         })
     }
     
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        if self.aboutMeTextField.text == "About Me"{
-            return true
-        }else {
-            return false
-        }
-    }
-    
-    func createBorders(){
+    private func createBorders(){
         emailTextField.layer.borderColor = UIColor.lightGray.cgColor
         emailTextField.layer.borderWidth = 0.5
         emailTextField.layer.cornerRadius = 8
@@ -112,11 +113,5 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
         phoneNumberTextField.layer.borderColor = UIColor.lightGray.cgColor
         phoneNumberTextField.layer.borderWidth = 0.5
         phoneNumberTextField.layer.cornerRadius = 8
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createBorders()
-        setLabels()
     }
 }

@@ -15,11 +15,50 @@ import FirebaseFirestore
 
 class postTripViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     
-    var departureAddressClicked = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
-    @IBOutlet weak var departureAddressButton: UIButton!
+    private var addressAsPlace : GMSPlace?
     
-    @IBOutlet weak var destinationAddressButton: UIButton!
+    private let tripCompletedSegue = "tripCompletedSegue"
+    
+    private let dbp = DBProvider()
+    
+    @IBOutlet weak var addressButton: UIButton!
+    
+    @IBOutlet weak var departureDate: UIDatePicker!
+    
+    @IBOutlet weak var hasCar: UISwitch!
+    
+    @IBOutlet weak var extraInfo: UITextField!
+    
+    @IBAction func addressButton(_ sender: UIButton) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+
+    @IBAction func createTrip(_ sender: Any) {
+        if(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
+            let trip : [String: AnyObject] =
+                [Constants.DATE : departureDate as AnyObject,
+                 Constants.HASCAR : hasCar.isOn as AnyObject,
+                 Constants.EXTRAINFO : extraInfo.text! as AnyObject,
+                 Constants.ADDRESS : addressAsPlace! as AnyObject]
+            dbp.uploadTrip(trip: trip)
+        }
+        self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
+    }
+    
+    private func isValidPlace(addressPlace : GMSPlace?) -> Bool {
+        if(addressPlace != nil){
+            return true
+        } else {
+            self.alertTheUser(title: "Problem with Address", message: "Please enter valid address")
+            return false
+        }
+    }
     
     private func alertTheUser(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -31,13 +70,10 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     private func isValidAddress(button: UIButton) -> Bool{
         switch button.currentTitle! {
         case "":
-            self.alertTheUser(title: "Problem with Depature Address", message: "Depature address cannot be blank")
+            self.alertTheUser(title: "Problem with Address", message: "Address cannot be blank")
             return false
-        case "Enter Depature Address Here":
-            self.alertTheUser(title: "Problem with Depature Address", message: "Must enter valid depature address")
-            return false
-        case "Enter Destination Address Here":
-            self.alertTheUser(title: "Problem with Depature Address", message: "Must enter valid depature address")
+        case addressButton.currentTitle!:
+            self.alertTheUser(title: "Problem with Address", message: "Must enter valid address")
             return false
         default:
             return true
@@ -45,16 +81,9 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-//        print("Place name: \(place.name)")
-//        print("Place address: \(String(describing: place.formattedAddress))")
-//        print("Place attributions: \(String(describing: place.attributions))")
         viewController.dismiss(animated: true, completion: nil)
-        if(departureAddressClicked){
-            departureAddressButton.setTitle(place.formattedAddress, for: .normal)
-            departureAddressClicked = false
-        } else {
-            destinationAddressButton.setTitle(place.formattedAddress, for: .normal)
-        }
+        addressAsPlace = place
+        addressButton.setTitle(place.formattedAddress, for: .normal)
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
@@ -72,52 +101,5 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-        
-    }
-    
-    @IBOutlet weak var month: UITextField!
-    
-    @IBOutlet weak var day: UITextField!
-    
-    @IBOutlet weak var year: UITextField!
-    
-    @IBOutlet weak var hasCar: UISwitch!
-    
-    @IBOutlet weak var extraInfo: UITextField!
-    
-    @IBAction func departureAddressButton(_ sender: UIButton) {
-        departureAddressClicked = true
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func destinationAddressButton(_ sender: UIButton) {
-        departureAddressClicked = false
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
-    }
-    
-    @IBAction func createTrip(_ sender: Any) {
-        if(isValidAddress(button: destinationAddressButton) && isValidAddress(button: departureAddressButton)){
-            let trip : [String: AnyObject] =
-                [Constants.MONTH : month.text! as AnyObject,
-                 Constants.DAY : day.text! as AnyObject,
-                 Constants.YEAR : year.text! as AnyObject,
-                 Constants.HASCAR : hasCar.isOn as AnyObject,
-                 Constants.EXTRAINFO : extraInfo.text! as AnyObject,
-                 Constants.DEPARTUREADDRESS : departureAddressButton.currentTitle! as AnyObject,
-                 Constants.DESTINATIONADDRESS : destinationAddressButton.currentTitle! as AnyObject]
-            let dbp = DBProvider()
-            dbp.uploadTrip(trip: trip)
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }

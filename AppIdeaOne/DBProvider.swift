@@ -79,7 +79,6 @@ class DBProvider {
     }
     
     func uploadTrip(trip : [String : AnyObject]) {
-        
-        userRef.child(self.id!).child(Constants.TRIPS).childByAutoId().setValue(trip)
+//        userRef.child(self.id!).child(Constants.TRIPS).child(trip[Constants.]).setValue(trip)
     }
 }

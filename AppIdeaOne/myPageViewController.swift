@@ -13,9 +13,16 @@ import FirebaseStorage
 
 class myPageViewController: UIViewController {
     
-    let editPageSegue : String = "editPageSegue"
-    let db = DBProvider()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createBorders()
+        setLabels()
+        setProfilePicture()
+    }
     
+    private let editPageSegue : String = "editPageSegue"
+    
+    private let db = DBProvider()
     
     @IBOutlet weak var myNameLabel: UILabel!
     
@@ -31,19 +38,17 @@ class myPageViewController: UIViewController {
         self.performSegue(withIdentifier: self.editPageSegue, sender: nil)
     }
     
-    var userRef: DatabaseReference {
+    private var userRef: DatabaseReference {
         
         return Database.database().reference().child(Constants.ID)
         
     }
     
-    var userSRef : StorageReference {
+    private var userSRef : StorageReference {
         return Storage.storage().reference().child(Constants.ID)
     }
     
-    
-    
-    func setLabels(){
+    private func setLabels(){
         print("started to retrieve info")
         userRef.child(DBProvider.Instance.id!).observeSingleEvent(of: .value, with: {
             snapshot in
@@ -58,7 +63,7 @@ class myPageViewController: UIViewController {
         })
     }
     
-    func setProfilePicture(){
+    private func setProfilePicture(){
         print("Started to retrieve profile picture")
         let storageRef = userSRef.child(db.id!).child("Profile Picture")
         let maxSize: Int64 = 3 * 1024 * 1024
@@ -71,7 +76,7 @@ class myPageViewController: UIViewController {
         }
     }
     
-    func createBorders(){
+    private func createBorders(){
         emailAddressLabel.layer.borderColor = UIColor.lightGray.cgColor
         emailAddressLabel.layer.borderWidth = 0.5
         emailAddressLabel.layer.cornerRadius = 8
@@ -82,13 +87,4 @@ class myPageViewController: UIViewController {
         phoneNumberLabel.layer.borderWidth = 0.5
         phoneNumberLabel.layer.cornerRadius = 8
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createBorders()
-        setLabels()
-        setProfilePicture()
-    }
-    
 }

@@ -10,8 +10,15 @@ import UIKit
 import FirebaseAuth
 
 class menuViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
 
-    let logoutSegue = "logoutSegue"
+    private let logoutSegue = "logoutSegue"
+    
     @IBAction func logoutButton(_ sender: Any) {
         let auther = Authenticator()
         if !(auther.logout()) {
@@ -19,11 +26,6 @@ class menuViewController: UIViewController {
         } else {
             performSegue(withIdentifier: self.logoutSegue, sender: nil)
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     private func alertTheUser(title: String, message: String) {

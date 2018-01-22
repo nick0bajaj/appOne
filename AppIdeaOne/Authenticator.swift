@@ -108,7 +108,7 @@ class Authenticator {
     }
     
     
-    private func isValidEmail(email : String) -> Bool {
+    func isValidEmail(email : String) -> Bool {
         let collegeChecker = supportedColleges()
         let college = collegeChecker.whatCollege(email: email)
         if(college == ""){
@@ -118,7 +118,7 @@ class Authenticator {
         }
     }
     
-    private func isEmail(email: String) -> Bool {
+    func isEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
