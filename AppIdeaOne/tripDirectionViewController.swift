@@ -1,15 +1,25 @@
 //
-//  ChatViewController.swift
+//  tripDirectionViewController.swift
 //  Split
 //
-//  Created by Nikhil Bajaj on 7/19/17.
-//  Copyright © 2017 NickBajaj. All rights reserved.
+//  Created by Nikhil Bajaj on 1/21/18.
+//  Copyright © 2018 NickBajaj. All rights reserved.
 //
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class tripDirectionViewController: UIViewController {
+    
+    let tripDirectionSegue = "tripDirectionSegue"
 
+    @IBAction func goingToBerkeley(_ sender: Any) {
+        self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+    }
+    
+    @IBAction func leavingBerkeley(_ sender: Any) {
+        self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

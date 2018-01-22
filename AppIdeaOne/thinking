@@ -4,8 +4,6 @@ Marketing
 
     Database rules - read/write
 
-    Advertising our product
-
     Advertising to gain money
 
 Design
@@ -24,16 +22,7 @@ Account Info
     Logout/Forgot Password/Change password/Deactivate account?/
 
 Creating account
-    Connect with Facebook
-
-    Add friends from facebook to users friends in app
-
     Verify Email when setting up
-
-Profile
-    Include option to add other users as friends
-
-    User Reviews
 
 Wall
     Figure out a way to traverse your database and organize posts from your friends, other students
@@ -50,13 +39,6 @@ Create Trip/Trips Page
     Only pick up riders who are at your school/friends with you
 
     Your trips page would include members with links to their profile and show drop off location.  Your trips page will give the option to boot members, show map view, chat, change the title (must have a unique title when creating trip), request join, leave group, show suggested riders.
-
-Finished Trip
-    Give user reviews
-
-Menu
-    Friends List
-    Create Chat
 
 
 
