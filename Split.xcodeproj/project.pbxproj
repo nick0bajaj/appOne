@@ -29,6 +29,7 @@
 		5AE818761EFDF2FC00C24C01 /* editPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE818751EFDF2FC00C24C01 /* editPageViewController.swift */; };
 		5C2B73B61FEF7CFF002B40B7 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2B73B51FEF7CFE002B40B7 /* iAd.framework */; };
 		5C31B0D72015B918001F00CD /* tripDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C31B0D62015B918001F00CD /* tripDirectionViewController.swift */; };
+		5CE852D820173F4200EC16F9 /* searchTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE852D720173F4200EC16F9 /* searchTripViewController.swift */; };
 		5D76A3B0351F7B99A5E87645 /* Pods_Split.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3D1A381DAA1D7C4BEE7818 /* Pods_Split.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		5AE818751EFDF2FC00C24C01 /* editPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editPageViewController.swift; sourceTree = "<group>"; };
 		5C2B73B51FEF7CFE002B40B7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		5C31B0D62015B918001F00CD /* tripDirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripDirectionViewController.swift; sourceTree = "<group>"; };
+		5CE852D720173F4200EC16F9 /* searchTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTripViewController.swift; sourceTree = "<group>"; };
 		AF3D1A381DAA1D7C4BEE7818 /* Pods_Split.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Split.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B471CB116FC0A899B05853DC /* Pods-Split.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Split.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Split/Pods-Split.debug.xcconfig"; sourceTree = "<group>"; };
 		FC6C59D1163502F849499447 /* Pods-Split.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Split.release.xcconfig"; path = "Pods/Target Support Files/Pods-Split/Pods-Split.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				5A7219C91F3299FB00142DAB /* mainPageViewController.swift */,
 				5A7219CB1F32A4F100142DAB /* mainTableViewCell.swift */,
 				5C31B0D62015B918001F00CD /* tripDirectionViewController.swift */,
+				5CE852D720173F4200EC16F9 /* searchTripViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				5A71321F1EEB2BED005BF29D /* signUpViewController.swift in Sources */,
 				5A75AF131EF0FF41002AA2AC /* menuViewController.swift in Sources */,
 				5A82ECA51EF4B81100AD7DA1 /* setUpProfile.swift in Sources */,
+				5CE852D820173F4200EC16F9 /* searchTripViewController.swift in Sources */,
 				5A7219CC1F32A4F100142DAB /* mainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

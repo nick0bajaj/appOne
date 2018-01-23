@@ -10,8 +10,18 @@ import UIKit
 
 class MainPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let searchSegue = "searchSegue"
+    
+    var searching : Bool = false
+    
+    @IBAction func searchButton(_ sender: Any) {
+        searching = true
+        self.performSegue(withIdentifier: self.searchSegue, sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searching = false
     }
     
     private let list = ["Milk", "Honey", "Bread", "Tomatoes"]
@@ -24,6 +34,11 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "primaryCell")
         cell.textLabel?.text = list[indexPath.row]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tripDirectionVC = segue.destination as! tripDirectionViewController
+        tripDirectionVC.fromSearch = true
     }
 
 }

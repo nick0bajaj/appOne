@@ -14,22 +14,41 @@ class tripDirectionViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    let toSearchVCSegue = "toSearchVCSegue"
+    
     var tdEmmigrating : Bool = false
+    
+    var fromSearch : Bool = false
     
     private let tripDirectionSegue = "tripDirectionSegue"
 
     @IBAction func goingToBerkeley(_ sender: Any) {
         tdEmmigrating = false
-        self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+        fromSearch = false
+        if (fromSearch){
+            self.performSegue(withIdentifier: toSearchVCSegue, sender: nil)
+        } else {
+            self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+        }
     }
     
     @IBAction func leavingBerkeley(_ sender: Any) {
         tdEmmigrating = true
-        self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+        fromSearch = false
+        if (fromSearch){
+            self.performSegue(withIdentifier: toSearchVCSegue, sender: nil)
+        } else {
+            self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var postTripVC = segue.destination as! postTripViewController
-        postTripVC.emmigrating = tdEmmigrating
+        if (fromSearch){
+            let searchTripVC = segue.destination as! searchTripViewController
+            searchTripVC.emmigrating = tdEmmigrating
+        } else {
+            let postTripVC = segue.destination as! postTripViewController
+            postTripVC.emmigrating = tdEmmigrating
+        }
     }
 }
