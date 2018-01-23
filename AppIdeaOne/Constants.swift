@@ -20,6 +20,8 @@ class Constants {
     static let LASTNAME = "lastName"
     static let TRIPS = "trips"
     static let ADDRESS = "address"
+    static let LATITUDE = "latitude"
+    static let LONGITUDE = "longitude"
     static let HASCAR = "hasCar"
     static let DATE = "date"
     static let EXTRAINFO = "extraInfo"

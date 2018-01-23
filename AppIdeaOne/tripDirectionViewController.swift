@@ -14,22 +14,22 @@ class tripDirectionViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    var buttonPressed : Bool = false
+    var tdEmmigrating : Bool = false
     
     private let tripDirectionSegue = "tripDirectionSegue"
 
     @IBAction func goingToBerkeley(_ sender: Any) {
-        buttonPressed = true
+        tdEmmigrating = false
         self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
     }
     
     @IBAction func leavingBerkeley(_ sender: Any) {
-        buttonPressed = false
+        tdEmmigrating = true
         self.performSegue(withIdentifier: self.tripDirectionSegue, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var postTripVC = segue.destination as! postTripViewController
-        postTripVC.direction = buttonPressed
+        postTripVC.emmigrating = tdEmmigrating
     }
 }

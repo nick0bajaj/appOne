@@ -20,13 +20,15 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
         setMinimumDate()
     }
     
+    let id = Auth.auth().currentUser?.uid
+    
     private var addressAsPlace : GMSPlace?
     
     private let tripCompletedSegue = "tripCompletedSegue"
     
     private let dbp = DBProvider()
     
-    var goingToBerkeley : Bool = false
+    var emmigrating : Bool = false
     
     @IBOutlet weak var addressButton: UIButton!
     
@@ -47,10 +49,16 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
             let trip : [String: AnyObject] =
                 [Constants.DATE : departureDate.date as AnyObject,
                  Constants.HASCAR : hasCar.isOn as AnyObject,
-                 Constants.EXTRAINFO : extraInfo.text! as AnyObject,
-                 Constants.ADDRESS : addressAsPlace! as AnyObject]
-            dbp.uploadTrip(trip: trip, direction: <#String#>)
+                 Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
+                 Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
+                 Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
+                 Constants.EXTRAINFO : extraInfo.text as AnyObject,
+                 Constants.USERS : id! as AnyObject]
+            print("before upload trips")
+            dbp.uploadTrip(trip: trip, leavingCampus: emmigrating)
+            print("made it past upload trips")
         }
+        print("out of if statement")
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
     }
     

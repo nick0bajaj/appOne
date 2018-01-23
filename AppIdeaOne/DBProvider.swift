@@ -82,18 +82,17 @@ class DBProvider {
         userRef.child(self.id!).child(Location).setValue(data)
     }
     
-    func uploadTrip(trip : [String : AnyObject], direction : String) {
-//        guard let date : String = trip[Constants.DATE]?.text, !date.isEmpty else {
-//            return
-//        }
-        let date : Date = trip[Constants.DATE] as! Date
-        let ref: DocumentReference? = nil
-        db.collection(Constants.TRIPS).document(date.description).setData(trip){
+    func uploadTrip(trip : [String : AnyObject], leavingCampus : Bool) {
+        var direction : String
+        if (leavingCampus){
+            direction = Constants.EMIGRATING
+        } else {
+            direction = Constants.IMMIGRATING
+        }
+        db.collection(Constants.TRIPS).document(direction).setData(trip){
             err in
             if let err = err {
                 print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
             }
         }
     }
