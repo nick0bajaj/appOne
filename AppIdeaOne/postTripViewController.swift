@@ -17,6 +17,7 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMinimumDate()
     }
     
     private var addressAsPlace : GMSPlace?
@@ -24,6 +25,8 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     private let tripCompletedSegue = "tripCompletedSegue"
     
     private let dbp = DBProvider()
+    
+    @IBOutlet weak var departureDatePicker: UIDatePicker!
     
     @IBOutlet weak var addressButton: UIButton!
     
@@ -78,6 +81,13 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
         default:
             return true
         }
+    }
+    
+    //sets current date as the minimum date on the Date Picker
+    private func setMinimumDate(){
+        let currDate = Date()
+        departureDatePicker.minimumDate = currDate
+        print(currDate.description)
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
