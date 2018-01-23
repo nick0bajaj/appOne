@@ -10,6 +10,8 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
+import FirebaseFirestore
+import GooglePlaces
 import UIKit
 
 
@@ -32,6 +34,8 @@ class DBProvider {
     var userStorageRef: StorageReference {
         return Storage.storage().reference().child("users").child(Constants.ID)
     }
+    
+    var db = Firestore.firestore()
     
     
     func saveUser(withID: String, firstName: String, lastName: String, email: String, password: String){
@@ -78,7 +82,19 @@ class DBProvider {
         userRef.child(self.id!).child(Location).setValue(data)
     }
     
-    func uploadTrip(trip : [String : AnyObject]) {
-//        userRef.child(self.id!).child(Constants.TRIPS).child(trip[Constants.]).setValue(trip)
+    func uploadTrip(trip : [String : AnyObject], direction : String) {
+//        guard let date : String = trip[Constants.DATE]?.text, !date.isEmpty else {
+//            return
+//        }
+        let date : Date = trip[Constants.DATE] as! Date
+        let ref: DocumentReference? = nil
+        db.collection(Constants.TRIPS).document(date.description).setData(trip){
+            err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
     }
 }

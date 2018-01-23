@@ -25,5 +25,8 @@ class Constants {
     static let EXTRAINFO = "extraInfo"
     static let ABOUTME = "aboutMe"
     static let PHONENUMBER = "phoneNumber"
+    static let USERS = "users"
+    static let EMIGRATING = "emigrating"
+    static let IMMIGRATING = "immigrating"
     static let PROFILEPICTURE = "profilePicture"
 }

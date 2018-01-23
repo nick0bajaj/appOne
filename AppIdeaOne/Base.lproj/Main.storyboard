@@ -600,7 +600,6 @@
                     <connections>
                         <outlet property="addressButton" destination="3U0-FO-thA" id="LCF-Xt-DYn"/>
                         <outlet property="departureDate" destination="fLu-Q4-iVn" id="qoi-NM-bjJ"/>
-                        <outlet property="departureDatePicker" destination="fLu-Q4-iVn" id="wTW-3X-79r"/>
                         <outlet property="extraInfo" destination="NQ8-G3-LnV" id="fwZ-7a-fnM"/>
                         <outlet property="hasCar" destination="hoT-l2-4I8" id="Ttc-pJ-c3u"/>
                         <segue destination="g2j-TR-1wX" kind="show" identifier="tripCompletedSegue" id="Ohs-W1-Hit"/>
@@ -1457,6 +1456,7 @@
         <image name="profile" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lYp-9H-Z0C"/>
         <segue reference="KDn-in-6nB"/>
         <segue reference="luF-XZ-PnO"/>
         <segue reference="adX-xu-Y6u"/>

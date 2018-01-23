@@ -26,7 +26,7 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     
     private let dbp = DBProvider()
     
-    @IBOutlet weak var departureDatePicker: UIDatePicker!
+    var goingToBerkeley : Bool = false
     
     @IBOutlet weak var addressButton: UIButton!
     
@@ -45,11 +45,11 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     @IBAction func createTrip(_ sender: Any) {
         if(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
             let trip : [String: AnyObject] =
-                [Constants.DATE : departureDate as AnyObject,
+                [Constants.DATE : departureDate.date as AnyObject,
                  Constants.HASCAR : hasCar.isOn as AnyObject,
                  Constants.EXTRAINFO : extraInfo.text! as AnyObject,
                  Constants.ADDRESS : addressAsPlace! as AnyObject]
-            dbp.uploadTrip(trip: trip)
+            dbp.uploadTrip(trip: trip, direction: <#String#>)
         }
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
     }
@@ -75,7 +75,7 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
         case "":
             self.alertTheUser(title: "Problem with Address", message: "Address cannot be blank")
             return false
-        case addressButton.currentTitle!:
+        case nil:
             self.alertTheUser(title: "Problem with Address", message: "Must enter valid address")
             return false
         default:
@@ -86,8 +86,8 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     //sets current date as the minimum date on the Date Picker
     private func setMinimumDate(){
         let currDate = Date()
-        departureDatePicker.minimumDate = currDate
-        print(currDate.description)
+        departureDate.minimumDate = currDate
+        print("Current date is\(currDate.description)")
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
