@@ -14,6 +14,10 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     var searching : Bool = false
     
+    //let defaultTableList
+    
+    var searchTableList : [String: AnyObject]? = nil
+    
     @IBAction func searchButton(_ sender: Any) {
         searching = true
         self.performSegue(withIdentifier: self.searchSegue, sender: nil)

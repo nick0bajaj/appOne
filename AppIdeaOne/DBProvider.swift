@@ -89,7 +89,8 @@ class DBProvider {
         } else {
             direction = Constants.IMMIGRATING
         }
-        db.collection(Constants.TRIPS).document(direction).setData(trip){
+        //Document added with ID: \(ref!.documentID)
+        db.collection(direction).addDocument(data: trip){
             err in
             if let err = err {
                 print("Error adding document: \(err)")

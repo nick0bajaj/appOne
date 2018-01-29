@@ -54,11 +54,8 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
                  Constants.EXTRAINFO : extraInfo.text as AnyObject,
                  Constants.USERS : id! as AnyObject]
-            print("before upload trips")
             dbp.uploadTrip(trip: trip, leavingCampus: emmigrating)
-            print("made it past upload trips")
         }
-        print("out of if statement")
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
     }
     

@@ -1410,6 +1410,9 @@
                                                     <constraint firstAttribute="width" constant="30" id="wAc-Bx-I65"/>
                                                 </constraints>
                                                 <state key="normal" title="MenuButton" image="icons8-Circled Left_50"/>
+                                                <connections>
+                                                    <segue destination="g2j-TR-1wX" kind="show" identifier="backSegueTripDir" id="PA5-az-7RI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1587,6 +1590,7 @@
                     <connections>
                         <outlet property="addressButton" destination="Tb8-bO-UbL" id="2eI-cY-2NK"/>
                         <outlet property="departureDate" destination="dsb-kT-71h" id="aaG-O7-mhN"/>
+                        <segue destination="g2j-TR-1wX" kind="show" identifier="searchTripSegue" id="uRD-SD-GXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blR-JN-oU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1610,6 +1614,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1wg-Os-luw"/>
-        <segue reference="dXz-Nv-3BT"/>
+        <segue reference="uRD-SD-GXc"/>
     </inferredMetricsTieBreakers>
 </document>

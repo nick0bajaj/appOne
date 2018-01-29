@@ -15,6 +15,10 @@ import FirebaseFirestore
 
 class searchTripViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     
+    let backSegue = "backSegueTripDir"
+    
+    let searchSegue = "searchTripSegue"
+    
     let id = Auth.auth().currentUser?.uid
     
     private var addressAsPlace : GMSPlace?
@@ -26,6 +30,17 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         setMinimumDate()
+        setButtonTitle()
+    }
+    
+    private func setButtonTitle(){
+        let emmigratingTitle = "Enter Destiantion Address Here"
+        let immigratingTitle = "Enter Departure Address Here"
+        if(emmigrating){
+            addressButton.setTitle(emmigratingTitle, for: .normal)
+        } else {
+            addressButton.setTitle(immigratingTitle, for: .normal)
+        }
     }
     
     @IBOutlet weak var addressButton: UIButton!
@@ -39,11 +54,25 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
     }
         
     @IBAction func searchTrips(_ sender: Any) {
-
+        if(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
+            let trip : [String: AnyObject] =
+                [Constants.DATE : departureDate.date as AnyObject,
+                 Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
+                 Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
+                 Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject]
+            dbp.uploadTrip(trip: trip, leavingCampus: emmigrating)
+        }
+        self.performSegue(withIdentifier: searchSegue, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
         
     private func isValidPlace(addressPlace : GMSPlace?) -> Bool {
         if(addressPlace != nil){
+            print("within isValidPlace: searchTripVC")
+            print(addressPlace?.formattedAddress ?? "error with address")
             return true
         } else {
             self.alertTheUser(title: "Problem with Address", message: "Please enter valid address")
