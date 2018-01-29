@@ -16,6 +16,10 @@ struct tripPost {
 
 class MainPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let lat = 0.0144927536231884
+    let lon = 0.0181818181818182
+    let withinDistanceInMiles = 15.0
+    
     var posts = [tripPost]()
     
     let cellTitle = "cell"
@@ -26,20 +30,29 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     var searching : Bool = false
     
-    //let defaultTableList
+    var isEmmigrating : Bool = false
     
-    var searchTableList : [String: AnyObject]? = nil
+    var searchCriteria : [String:AnyObject]? = nil
+    
+    var searchButtonClicked = false
     
     @IBOutlet weak var tripsTableView: UITableView!
     
     @IBAction func searchButton(_ sender: Any) {
+        searchButtonClicked = true
+        self.performSegue(withIdentifier: self.searchSegue, sender: nil)
+    }
+    
+    @IBAction func postTripButton(_ sender: Any) {
+        searchButtonClicked = false
         self.performSegue(withIdentifier: self.searchSegue, sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tripsTableView.delegate = self
-        tripsTableView.dataSource = self as? UITableViewDataSource
+        tripsTableView.dataSource = self
+        print("Searching variable is set to \(searching)")
         if(searching){
             setupTableSearch()
         } else {
@@ -48,7 +61,40 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupTableSearch() {
-        
+        print("inside setupTableSearch()")
+        let searchDate : Double = (searchCriteria![Constants.DATE] as! NSDate).timeIntervalSince1970
+        let point : GeoPoint = searchCriteria![Constants.GEOPOINT] as! GeoPoint
+        let lat = point.latitude
+        let lon = point.longitude
+        let lbGeoPoint = getLowerBoundGeoPoint(latitude: lat, longitude: lon)
+        let ubGeoPoint = getUpperBoundGeoPoint(latitude: lat, longitude: lon)
+        db.collection(Constants.TRIPS).whereField(Constants.ISEMMIGRATING, isEqualTo: isEmmigrating).whereField(Constants.NSDATE, isEqualTo: searchDate).whereField(Constants.GEOPOINT, isGreaterThan: lbGeoPoint).whereField(Constants.GEOPOINT, isLessThan: ubGeoPoint).addSnapshotListener({querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshots: \(error!)")
+                return
+            }
+            snapshot.documentChanges.forEach { diff in
+                if (diff.type == .added) {
+                    print("Search city: \(diff.document.data())")
+                    let date = diff.document.data()[Constants.DATE] as! NSDate
+                    let address = diff.document.data()[Constants.ADDRESS] as! String
+                    self.posts.insert(tripPost(date: date, address: address), at: 0)
+                    self.tripsTableView.reloadData()
+                }
+            }
+        })
+    }
+    
+    private func getUpperBoundGeoPoint(latitude: Double, longitude: Double) -> GeoPoint {
+        let upperBoundLat = latitude + (lat * withinDistanceInMiles)
+        let upperBoundLon = longitude + (lon * withinDistanceInMiles)
+        return GeoPoint(latitude: upperBoundLat, longitude: upperBoundLon)
+    }
+    
+    private func getLowerBoundGeoPoint(latitude: Double, longitude: Double) -> GeoPoint {
+        let lowerBoundLat = latitude - lat * withinDistanceInMiles
+        let lowerBoundLon = longitude - lon * withinDistanceInMiles
+        return GeoPoint(latitude: lowerBoundLat, longitude: lowerBoundLon)
     }
 
     private func setupTableDefault(){
@@ -63,8 +109,6 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
                     print("New city: \(diff.document.data())")
                     let date = diff.document.data()[Constants.DATE] as! NSDate
                     let address = diff.document.data()[Constants.ADDRESS] as! String
-//                    let date = snapshot.value(forKey: Constants.DATE) as! NSDate
-//                    let address = snapshot.value(forKey: Constants.ADDRESS) as! String
                     self.posts.insert(tripPost(date: date, address: address), at: 0)
                     self.tripsTableView.reloadData()
                 }
@@ -85,7 +129,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tripDirectionVC = segue.destination as! tripDirectionViewController
-        tripDirectionVC.fromSearch = true
+        tripDirectionVC.fromSearch = searchButtonClicked
     }
 
 }

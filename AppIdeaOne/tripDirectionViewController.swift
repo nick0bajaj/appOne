@@ -24,7 +24,6 @@ class tripDirectionViewController: UIViewController {
 
     @IBAction func goingToBerkeley(_ sender: Any) {
         tdEmmigrating = false
-        fromSearch = false
         if (fromSearch){
             self.performSegue(withIdentifier: toSearchVCSegue, sender: nil)
         } else {
@@ -34,7 +33,6 @@ class tripDirectionViewController: UIViewController {
     
     @IBAction func leavingBerkeley(_ sender: Any) {
         tdEmmigrating = true
-        fromSearch = false
         if (fromSearch){
             self.performSegue(withIdentifier: toSearchVCSegue, sender: nil)
         } else {
@@ -44,6 +42,7 @@ class tripDirectionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (fromSearch){
+            fromSearch = false
             let searchTripVC = segue.destination as! searchTripViewController
             searchTripVC.emmigrating = tdEmmigrating
         } else {

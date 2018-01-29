@@ -23,8 +23,6 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
     
     private var addressAsPlace : GMSPlace?
     
-    private let dbp = DBProvider()
-    
     var emmigrating : Bool = false
 
     override func viewDidLoad() {
@@ -64,19 +62,22 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
         }
     }
     
-    private func getTripInfo() -> [String: AnyObject]{
+    private func getSearchCriteria() -> [String: AnyObject]{
+        let lat : Double = (addressAsPlace?.coordinate.latitude)!
+        let lon : Double = (addressAsPlace?.coordinate.longitude)!
+        let point : GeoPoint = GeoPoint(latitude: lat, longitude: lon)
         let trip : [String: AnyObject] =
                 [Constants.DATE : departureDate.date as AnyObject,
-                 Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
-                 Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
+                 Constants.GEOPOINT : point as AnyObject,
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject]
         return trip;
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let mainPageVC = segue.destination as! MainPageViewController
-        mainPageVC.searchTableList = getTripInfo()
+        mainPageVC.searchCriteria = getSearchCriteria()
         mainPageVC.searching = true
+        mainPageVC.isEmmigrating = emmigrating 
     }
         
     private func isValidPlace(addressPlace : GMSPlace?) -> Bool {
@@ -129,6 +130,7 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
         
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         viewController.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: backSegue, sender: nil)
     }
         
     // Turn the network activity indicator on and off again.

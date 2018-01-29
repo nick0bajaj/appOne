@@ -52,15 +52,20 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
                 [Constants.DATE : departureDate.date as AnyObject,
                  Constants.NSDATE : dateStamp as AnyObject,
                  Constants.HASCAR : hasCar.isOn as AnyObject,
-                 Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
-                 Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
+                 Constants.GEOPOINT : getGeoPoint() as AnyObject,
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
                  Constants.EXTRAINFO : extraInfo.text as AnyObject,
                  Constants.USERS : id! as AnyObject,
-                 Constants.DIRECTION : emmigrating as AnyObject]
+                 Constants.ISEMMIGRATING : emmigrating as AnyObject]
             dbp.uploadTrip(trip: trip)
         }
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
+    }
+    
+    private func getGeoPoint() -> GeoPoint{
+        let lat : Double = (addressAsPlace?.coordinate.latitude)!
+        let lon : Double = (addressAsPlace?.coordinate.longitude)!
+        return GeoPoint(latitude: lat, longitude: lon)
     }
     
     private func isValidPlace(addressPlace : GMSPlace?) -> Bool {

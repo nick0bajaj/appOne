@@ -20,8 +20,7 @@ class Constants {
     static let LASTNAME = "lastName"
     static let TRIPS = "trips"
     static let ADDRESS = "address"
-    static let LATITUDE = "latitude"
-    static let LONGITUDE = "longitude"
+    static let GEOPOINT = "geopoint"
     static let HASCAR = "hasCar"
     static let DATE = "date"
     static let EXTRAINFO = "extraInfo"
@@ -31,6 +30,6 @@ class Constants {
     static let EMIGRATING = "emigrating"
     static let IMMIGRATING = "immigrating"
     static let PROFILEPICTURE = "profilePicture"
-    static let DIRECTION = "direction"
+    static let ISEMMIGRATING = "isemmigrating"
     static let NSDATE = "nsdate"
 }

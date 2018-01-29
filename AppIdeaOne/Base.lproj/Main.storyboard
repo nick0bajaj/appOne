@@ -332,7 +332,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button" image="icons8-Comments_50"/>
                                                         <connections>
-                                                            <segue destination="3an-Ln-Pd1" kind="show" id="cBs-Xn-gKH"/>
+                                                            <action selector="postTripButton:" destination="g2j-TR-1wX" eventType="touchUpInside" id="xEZ-14-VtY"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsk-lu-aL0">
@@ -425,10 +425,10 @@
             </objects>
             <point key="canvasLocation" x="2784.8000000000002" y="-116.49175412293854"/>
         </scene>
-        <!--searchViewController-->
+        <!--postTripViewController-->
         <scene sceneID="oA8-0x-VCb">
             <objects>
-                <viewController title="searchViewController" id="pJ7-zF-jgU" customClass="postTripViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="postTripViewController" id="pJ7-zF-jgU" customClass="postTripViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hfd-An-tHY"/>
                         <viewControllerLayoutGuide type="bottom" id="aUW-nX-Gmk"/>
@@ -1587,7 +1587,6 @@
         <image name="searchIcon" width="520" height="520"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1wg-Os-luw"/>
         <segue reference="uRD-SD-GXc"/>
     </inferredMetricsTieBreakers>
 </document>
