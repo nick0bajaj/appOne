@@ -31,4 +31,6 @@ class Constants {
     static let EMIGRATING = "emigrating"
     static let IMMIGRATING = "immigrating"
     static let PROFILEPICTURE = "profilePicture"
+    static let DIRECTION = "direction"
+    static let NSDATE = "nsdate"
 }

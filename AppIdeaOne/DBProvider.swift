@@ -82,15 +82,9 @@ class DBProvider {
         userRef.child(self.id!).child(Location).setValue(data)
     }
     
-    func uploadTrip(trip : [String : AnyObject], leavingCampus : Bool) {
-        var direction : String
-        if (leavingCampus){
-            direction = Constants.EMIGRATING
-        } else {
-            direction = Constants.IMMIGRATING
-        }
+    func uploadTrip(trip : [String : AnyObject]) {
         //Document added with ID: \(ref!.documentID)
-        db.collection(direction).addDocument(data: trip){
+        db.collection(Constants.TRIPS).addDocument(data: trip){
             err in
             if let err = err {
                 print("Error adding document: \(err)")

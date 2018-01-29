@@ -45,16 +45,20 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
     }
 
     @IBAction func createTrip(_ sender: Any) {
+        let dateStamp = departureDate.date.timeIntervalSince1970
+        print("this is the dateStamp \(dateStamp)")
         if(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
             let trip : [String: AnyObject] =
                 [Constants.DATE : departureDate.date as AnyObject,
+                 Constants.NSDATE : dateStamp as AnyObject,
                  Constants.HASCAR : hasCar.isOn as AnyObject,
                  Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
                  Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
                  Constants.EXTRAINFO : extraInfo.text as AnyObject,
-                 Constants.USERS : id! as AnyObject]
-            dbp.uploadTrip(trip: trip, leavingCampus: emmigrating)
+                 Constants.USERS : id! as AnyObject,
+                 Constants.DIRECTION : emmigrating as AnyObject]
+            dbp.uploadTrip(trip: trip)
         }
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
     }

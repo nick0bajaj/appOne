@@ -15,9 +15,6 @@
             <string>Futura-Bold</string>
             <string>Futura-Medium</string>
         </array>
-        <array key="HiraginoKakuGothic.ttc">
-            <string>HiraginoSans-W3</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Sign-In page-->
@@ -377,53 +374,29 @@
                                         </constraints>
                                         <color key="sectionIndexColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="primaryCell" rowHeight="120" id="S0y-F0-xAr" customClass="mainTableViewCell" customModule="Split" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Mlk-1W-ND9" detailTextLabel="kby-4Z-m5G" style="IBUITableViewCellStyleValue1" id="0Xf-IK-Abx">
+                                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S0y-F0-xAr" id="KzK-vn-9ho" customClass="mainTableViewCell" customModule="Split" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="119.5"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Xf-IK-Abx" id="gnK-FX-Ba6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qk-wq-b61">
-                                                            <rect key="frame" x="8" y="10" width="100" height="100"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="gLP-Uv-m2B"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bob, Marley, Nick, Shayne, Cooper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62k-hC-tcD">
-                                                            <rect key="frame" x="116" y="10" width="219" height="75"/>
-                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mlk-1W-ND9">
+                                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="San Diego, Santa Barbara, Los Anjeles " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guq-vC-lsV">
-                                                            <rect key="frame" x="116" y="85" width="219" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="3XM-jE-bsF"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
-                                                            <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kby-4Z-m5G">
+                                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="2Qk-wq-b61" firstAttribute="top" secondItem="KzK-vn-9ho" secondAttribute="topMargin" constant="-1" id="0Bb-ng-48X"/>
-                                                        <constraint firstItem="2Qk-wq-b61" firstAttribute="top" secondItem="62k-hC-tcD" secondAttribute="top" id="1O2-XW-Eko"/>
-                                                        <constraint firstItem="62k-hC-tcD" firstAttribute="trailing" secondItem="Guq-vC-lsV" secondAttribute="trailing" id="20D-Bo-q5b"/>
-                                                        <constraint firstItem="2Qk-wq-b61" firstAttribute="bottom" secondItem="Guq-vC-lsV" secondAttribute="bottom" id="BGc-1E-ohB"/>
-                                                        <constraint firstItem="2Qk-wq-b61" firstAttribute="centerY" secondItem="KzK-vn-9ho" secondAttribute="centerY" id="Bsg-0t-4a6"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="62k-hC-tcD" secondAttribute="trailing" constant="-1" id="IE8-F2-OVa"/>
-                                                        <constraint firstItem="62k-hC-tcD" firstAttribute="leading" secondItem="2Qk-wq-b61" secondAttribute="trailing" constant="8" symbolic="YES" id="QZa-Qr-pC6"/>
-                                                        <constraint firstItem="2Qk-wq-b61" firstAttribute="leading" secondItem="KzK-vn-9ho" secondAttribute="leadingMargin" constant="-8" id="Zug-5W-oTw"/>
-                                                        <constraint firstItem="62k-hC-tcD" firstAttribute="leading" secondItem="Guq-vC-lsV" secondAttribute="leading" id="ek7-wH-VCh"/>
-                                                        <constraint firstItem="Guq-vC-lsV" firstAttribute="top" secondItem="62k-hC-tcD" secondAttribute="bottom" id="q9o-XE-SnQ"/>
-                                                    </constraints>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="groupPhoto" destination="2Qk-wq-b61" id="sxR-aj-nZr"/>
-                                                    <outlet property="namesOfTravellers" destination="62k-hC-tcD" id="ykI-ds-QgL"/>
-                                                    <outlet property="travellerDestinations" destination="Guq-vC-lsV" id="GgJ-ro-Rgu"/>
-                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -444,6 +417,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="aAh-IJ-jfR"/>
                     <connections>
+                        <outlet property="tripsTableView" destination="P4M-uH-49e" id="Wh1-Gw-H1k"/>
                         <segue destination="3an-Ln-Pd1" kind="show" identifier="searchSegue" id="1wg-Os-luw"/>
                     </connections>
                 </viewController>

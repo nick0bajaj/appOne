@@ -10,7 +10,6 @@
 		5A48361A1EF0B9C800A1AD9B /* myPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4836191EF0B9C800A1AD9B /* myPageViewController.swift */; };
 		5A71321F1EEB2BED005BF29D /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71321E1EEB2BED005BF29D /* signUpViewController.swift */; };
 		5A7219CA1F3299FB00142DAB /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7219C91F3299FB00142DAB /* mainPageViewController.swift */; };
-		5A7219CC1F32A4F100142DAB /* mainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7219CB1F32A4F100142DAB /* mainTableViewCell.swift */; };
 		5A75AF131EF0FF41002AA2AC /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75AF121EF0FF41002AA2AC /* menuViewController.swift */; };
 		5A82ECA51EF4B81100AD7DA1 /* setUpProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82ECA41EF4B81100AD7DA1 /* setUpProfile.swift */; };
 		5A82ECA71EF4C12000AD7DA1 /* thinking in Resources */ = {isa = PBXBuildFile; fileRef = 5A82ECA61EF4C12000AD7DA1 /* thinking */; };
@@ -37,7 +36,6 @@
 		5A4836191EF0B9C800A1AD9B /* myPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPageViewController.swift; sourceTree = "<group>"; };
 		5A71321E1EEB2BED005BF29D /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		5A7219C91F3299FB00142DAB /* mainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
-		5A7219CB1F32A4F100142DAB /* mainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainTableViewCell.swift; sourceTree = "<group>"; };
 		5A75AF121EF0FF41002AA2AC /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		5A82ECA41EF4B81100AD7DA1 /* setUpProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setUpProfile.swift; sourceTree = "<group>"; };
 		5A82ECA61EF4C12000AD7DA1 /* thinking */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = thinking; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				5AE818731EFDF2E900C24C01 /* usersPageViewController.swift */,
 				5AE818751EFDF2FC00C24C01 /* editPageViewController.swift */,
 				5A7219C91F3299FB00142DAB /* mainPageViewController.swift */,
-				5A7219CB1F32A4F100142DAB /* mainTableViewCell.swift */,
 				5C31B0D62015B918001F00CD /* tripDirectionViewController.swift */,
 				5CE852D720173F4200EC16F9 /* searchTripViewController.swift */,
 			);
@@ -350,7 +347,6 @@
 				5A75AF131EF0FF41002AA2AC /* menuViewController.swift in Sources */,
 				5A82ECA51EF4B81100AD7DA1 /* setUpProfile.swift in Sources */,
 				5CE852D820173F4200EC16F9 /* searchTripViewController.swift in Sources */,
-				5A7219CC1F32A4F100142DAB /* mainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

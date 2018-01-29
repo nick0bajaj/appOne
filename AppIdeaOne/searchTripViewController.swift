@@ -54,19 +54,29 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
     }
         
     @IBAction func searchTrips(_ sender: Any) {
-        if(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
-            let trip : [String: AnyObject] =
+        checkAddress()
+        self.performSegue(withIdentifier: searchSegue, sender: nil)
+    }
+    
+    private func checkAddress() {
+        if !(isValidAddress(button: addressButton) && isValidPlace(addressPlace : addressAsPlace)){
+            alertTheUser(title: "Invalid Address", message: "Please enter valid  address and try again.")
+        }
+    }
+    
+    private func getTripInfo() -> [String: AnyObject]{
+        let trip : [String: AnyObject] =
                 [Constants.DATE : departureDate.date as AnyObject,
                  Constants.LATITUDE : addressAsPlace?.coordinate.latitude as AnyObject,
                  Constants.LONGITUDE : addressAsPlace?.coordinate.longitude as AnyObject,
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject]
-            dbp.uploadTrip(trip: trip, leavingCampus: emmigrating)
-        }
-        self.performSegue(withIdentifier: searchSegue, sender: nil)
+        return trip;
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let mainPageVC = segue.destination as! MainPageViewController
+        mainPageVC.searchTableList = getTripInfo()
+        mainPageVC.searching = true
     }
         
     private func isValidPlace(addressPlace : GMSPlace?) -> Bool {
