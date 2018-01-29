@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 struct tripPost {
-    let date : NSDate!
+    let date : String!
     let address : String!
 }
 
@@ -62,7 +62,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     private func setupTableSearch() {
         print("inside setupTableSearch()")
-        let searchDate : Double = (searchCriteria![Constants.DATE] as! NSDate).timeIntervalSince1970
+        let searchDate : NSDate = (searchCriteria![Constants.NSDATE] as! NSDate)
         let point : GeoPoint = searchCriteria![Constants.GEOPOINT] as! GeoPoint
         let lat = point.latitude
         let lon = point.longitude
@@ -76,7 +76,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
                     print("Search city: \(diff.document.data())")
-                    let date = diff.document.data()[Constants.DATE] as! NSDate
+                    let date = diff.document.data()[Constants.DATE] as! String
                     let address = diff.document.data()[Constants.ADDRESS] as! String
                     self.posts.insert(tripPost(date: date, address: address), at: 0)
                     self.tripsTableView.reloadData()
@@ -98,7 +98,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     private func setupTableDefault(){
-        let date : Double = Date().timeIntervalSince1970
+        let date = NSDate.init().timeIntervalSince1970
         db.collection(Constants.TRIPS).whereField(Constants.NSDATE, isGreaterThanOrEqualTo: date).addSnapshotListener({querySnapshot, error in
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
@@ -107,9 +107,9 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
                     print("New city: \(diff.document.data())")
-                    let date = diff.document.data()[Constants.DATE] as! NSDate
+                    let date = diff.document.data()[Constants.DATE] as! String
                     let address = diff.document.data()[Constants.ADDRESS] as! String
-                    self.posts.insert(tripPost(date: date, address: address), at: 0)
+                    self.posts.insert(tripPost(date: date as String, address: address), at: 0)
                     self.tripsTableView.reloadData()
                 }
             }
@@ -122,8 +122,8 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tripsTableView.dequeueReusableCell(withIdentifier: cellTitle)
-        cell?.textLabel?.text = posts[indexPath.row].address
-        cell?.detailTextLabel?.text = posts[indexPath.row].date.description(with: "MM/dd/yy")
+        cell?.detailTextLabel?.text = posts[indexPath.row].date.description
+        cell?.detailTextLabel?.text = posts[indexPath.row].address
         return cell!
     }
     

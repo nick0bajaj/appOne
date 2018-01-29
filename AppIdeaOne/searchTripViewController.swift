@@ -67,9 +67,10 @@ class searchTripViewController: UIViewController, GMSAutocompleteViewControllerD
         let lon : Double = (addressAsPlace?.coordinate.longitude)!
         let point : GeoPoint = GeoPoint(latitude: lat, longitude: lon)
         let trip : [String: AnyObject] =
-                [Constants.DATE : departureDate.date as AnyObject,
+                [Constants.NSDATE : departureDate.date.timeIntervalSince1970 as AnyObject,
                  Constants.GEOPOINT : point as AnyObject,
-                 Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject]
+                 Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
+                 Constants.DATE : departureDate.description as AnyObject]
         return trip;
     }
     
