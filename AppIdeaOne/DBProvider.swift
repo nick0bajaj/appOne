@@ -69,6 +69,20 @@ class DBProvider {
         }
     }
     
+    func getProfilePicture()-> UIImage?{
+        let storageRef = userStorageRef.child(self.id).child(Constants.PROFILEPICTURE)
+        let maxSize: Int64 = 3 * 1024 * 1024
+        var image: UIImage? = nil
+        storageRef.getData(maxSize: maxSize) { (data, error) in
+            if(error != nil){
+                print("error in getProfilePicture() \(error!.localizedDescription)")
+            } else {
+                image = UIImage(data: data!)
+            }
+        }
+        return image
+    }
+    
     func updateProfile(number: String, aboutMe: String) {
         uploadInfo(Location: Constants.PHONENUMBER, Value: number)
         uploadInfo(Location: Constants.ABOUTME, Value: aboutMe)
@@ -112,7 +126,7 @@ class DBProvider {
         db.collection(Constants.USERS).document(userID).getDocument { (document, error) in
             if let document = document {
                 print("Document data: \(String(describing: document.data()))")
-                data = document.data()
+                data = document.data() as! [String : AnyObject]
             } else {
                 print("Document does not exist, error:  \(String(describing: error))")
             }

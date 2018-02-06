@@ -35,10 +35,6 @@ class myPageViewController: UIViewController {
         self.performSegue(withIdentifier: self.editPageSegue, sender: nil)
     }
     
-    private var userSRef : StorageReference {
-        return Storage.storage().reference().child(Constants.ID)
-    }
-    
     private func setLabels(){
         print("started to retrieve info")
         if let data = db.getUserProfile(userID: db.id){
@@ -55,14 +51,11 @@ class myPageViewController: UIViewController {
     
     private func setProfilePicture(){
         print("Started to retrieve profile picture")
-        let storageRef = userSRef.child(db.id).child("Profile Picture")
-        let maxSize: Int64 = 3 * 1024 * 1024
-        storageRef.getData(maxSize: maxSize) { (data, error) in
-            if (error != nil) {
-                print(error!.localizedDescription)
-            } else {
-                self.profileImage.image = UIImage(data: data!)
-            }
+        let data : UIImage? = db.getProfilePicture()
+        if(data != nil){
+            self.profileImage.image = data!
+        } else {
+            self.alertTheUser(title: db.dataErrorMessage, message: "Sorry, could not get profile picture")
         }
     }
     
