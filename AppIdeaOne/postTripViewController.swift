@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import GooglePlaces
 import MapKit
 import CoreLocation
@@ -20,13 +19,11 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
         setMinimumDate()
     }
     
-    let id = Auth.auth().currentUser?.uid
-    
     private var addressAsPlace : GMSPlace?
     
     private let tripCompletedSegue = "tripCompletedSegue"
     
-    private let dbp = DBProvider()
+    private let db = DBProvider().Instance
     
     var emmigrating : Bool = false
     
@@ -55,9 +52,12 @@ class postTripViewController: UIViewController, GMSAutocompleteViewControllerDel
                  Constants.GEOPOINT : getGeoPoint() as AnyObject,
                  Constants.ADDRESS : addressAsPlace?.formattedAddress as AnyObject,
                  Constants.EXTRAINFO : extraInfo.text as AnyObject,
-                 Constants.USERS : id! as AnyObject,
+                 Constants.USERS : db.id as AnyObject,
                  Constants.ISEMMIGRATING : emmigrating as AnyObject]
-            dbp.uploadTrip(trip: trip)
+            if let errorMessage: String = db.uploadTrip(trip: trip){
+                self.alertTheUser(title: db.dataErrorMessage, message: errorMessage)
+                return
+            }
         }
         self.performSegue(withIdentifier: tripCompletedSegue, sender: nil)
     }

@@ -27,21 +27,37 @@ class Authenticator {
         return auth
     }
     
-    func signUp(firstName: String, lastName: String, email: String, password: String, loginHandler: LoginHandler?) {
-        Auth.auth().createUser(withEmail: email, password: password, completion: {
+    let authenticatorErrorMessage = "Problem with Authentication"
+    
+    private let db = DBProvider()
+    
+    func signUp(firstName: String, lastName: String, email: String, firstPassword: String, secondPassword: String, loginHandler: LoginHandler?)-> String? {
+        var errorMessage : String? = nil
+        errorMessage = checkName(firstName: firstName, lastName: lastName)
+        errorMessage = checkPassword(firstPassword: firstPassword, secondPassword: secondPassword)
+        if((errorMessage) != nil){
+            return errorMessage
+        }
+        Auth.auth().createUser(withEmail: email, password: firstPassword, completion: {
             (user, error) in
             if (error != nil){
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler)
             } else {
-                if user?.uid != nil {
-                    DBProvider.Instance.saveUser(withID: user!.uid, firstName: firstName, lastName: lastName, email: email, password: password)
-                    self.login(Email: email, password: password, loginHandler: loginHandler)
+                errorMessage = self.db.saveUser(firstName: firstName, lastName: lastName, email: email, password: firstPassword)
+                if(errorMessage == nil){
+                 errorMessage = self.login(Email: email, password: firstPassword, loginHandler: loginHandler)
                 }
             }
         })
+        return errorMessage
     }
     
-    func login(Email: String, password: String, loginHandler : LoginHandler?){
+    func login(Email: String, password: String, loginHandler : LoginHandler?) -> String? {
+        var errorMessage : String? = nil
+        errorMessage = checkEmailAndPassword(email: Email, firstPassword: password, secondPassword: password)
+        if((errorMessage) != nil){
+            return errorMessage
+        }
         Auth.auth().signIn(withEmail: Email, password: password, completion: { (user, error) in
             if error != nil {
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler)
@@ -49,6 +65,7 @@ class Authenticator {
                 loginHandler?(nil)
             }
         })
+        return nil
     }
     
     private func handleErrors(err: NSError, loginHandler: LoginHandler?){
@@ -73,21 +90,19 @@ class Authenticator {
         }
 
 }
-    func checkName(firstName: String, lastName: String) -> String {
+    private func checkName(firstName: String, lastName: String) -> String? {
         if(firstName == ""){
             return "Please enter your first name"
         } else if (lastName == ""){
             return "Please enter your last name"
-        } else {
-            return ""
         }
+        return nil
     }
     
-    func passwordsPass(firstPassword: String, secondPassword: String) -> String {
-        let password = firstPassword
-        let hasLowerCase = NSPredicate(format: "SELF MATCHES %@", ".*[a-z]+.*").evaluate(with: password)
-        let hasUpperCase = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z]+.*").evaluate(with: password)
-        let hasDigit = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*").evaluate(with: password)
+    private func checkPassword(firstPassword: String, secondPassword: String) -> String? {
+        let hasLowerCase = NSPredicate(format: "SELF MATCHES %@", ".*[a-z]+.*").evaluate(with: firstPassword)
+        let hasUpperCase = NSPredicate(format: "SELF MATCHES %@", ".*[A-Z]+.*").evaluate(with: firstPassword)
+        let hasDigit = NSPredicate(format: "SELF MATCHES %@", ".*[0-9].*").evaluate(with: firstPassword)
         if(firstPassword == ""){
             return "Please enter a desired password"
         } else if (secondPassword == ""){
@@ -102,38 +117,40 @@ class Authenticator {
             return "Password must have at least 1 lower case character"
         } else if (!hasUpperCase){
             return "Password must have at least 1 upper case character"
-        } else {
-            return ""
         }
+        return nil
     }
     
     
-    func isValidEmail(email : String) -> Bool {
-        let collegeChecker = supportedColleges()
-        let college = collegeChecker.whatCollege(email: email)
-        if(college == ""){
-            return false
-        } else {
-            return true
-        }
+    private func isBerkeleyEmail(email : String) -> Bool {
+        let berkeleyRegex : String = "[A-Z0-9a-z._%+-]+@[bB][eE][rR][kK][eE][lL][eE][yY].[eE][dD][uU]"
+        return NSPredicate(format: "Self Matches %@", berkeleyRegex).evaluate(with:email)
     }
     
-    func isEmail(email: String) -> Bool {
+    private func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
     }
     
-    func checkEmail(email: String) -> String {
+    private func checkEmail(email: String) -> String? {
+        var errorMessage : String? = nil
         if(isValidEmail(email: email)){
-            return ""
+            errorMessage = "Please Enter a Valid Email"
+        } else if(isBerkeleyEmail(email: email)){
+            errorMessage = "Sorry, this app is currently only for Berkeley students. Try using a Berkeley email if you have one."
         }
-        if(isEmail(email: email)){
-            return "Sorry, this app is currently only for Berkeley students. Try using a Berkeley email if you have one."
+        return errorMessage
+    }
+    
+    private func checkEmailAndPassword(email: String, firstPassword: String, secondPassword: String) -> String? {
+        if let errorMessage : String = checkPassword(firstPassword: firstPassword, secondPassword: secondPassword){
+            return errorMessage
+        } else if let errorMessage: String = checkEmail(email: email){
+            return errorMessage
         } else {
-            return "Please use a valid email address"
+            return nil
         }
-        
     }
     
     func logout() -> Bool{

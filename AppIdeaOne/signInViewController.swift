@@ -24,23 +24,21 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func Login(_ sender: AnyObject) {
-        let auth = Authenticator()
-        let emailCheck = auth.checkEmail(email: emailTextField.text!)
-        if (emailCheck != "") {
-            alertTheUser(title: "Problem with Authentication", message: emailCheck)
-        } else if (auth.passwordsPass(firstPassword: passwordTextField.text!, secondPassword: passwordTextField.text!) != ""){
-            alertTheUser(title: "Problem with Authentication", message: "Invalid Password")
+        var providedErrorMessage : String? = nil
+        var errorMessage : String? = nil
+        let titleErrorMessage = Authenticator.authorizer.authenticatorErrorMessage
+        errorMessage = Authenticator.authorizer.login(Email: emailTextField.text!, password: passwordTextField.text!, loginHandler: { (message) in
+            providedErrorMessage = message
+        })
+        if(providedErrorMessage != nil){
+            self.alertTheUser(title: titleErrorMessage, message: providedErrorMessage!)
+            print("Login failed - func Login")
+        } else if (errorMessage != nil){
+            self.alertTheUser(title: titleErrorMessage, message: errorMessage!)
+            print("Login failed - func Login")
         } else {
-        Authenticator.authorizer.login(Email: emailTextField.text!, password: passwordTextField.text!,
-            loginHandler: { (message) in
-                if (message != nil) {
-                    print("login failed!!")
-                    self.alertTheUser(title: "Problem With Authentication", message: message!)
-                } else {
-                    print("Login Completed! ~ func Login")
-                    self.performSegue(withIdentifier: self.loginSegue, sender: nil)
-                }
-                })
+            print("Login Completed! - from func Login")
+            self.performSegue(withIdentifier: self.loginSegue, sender: nil)
         }
     }
     

@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
-import FirebaseStorage
 
 class myPageViewController: UIViewController {
     
@@ -38,34 +35,27 @@ class myPageViewController: UIViewController {
         self.performSegue(withIdentifier: self.editPageSegue, sender: nil)
     }
     
-    private var userRef: DatabaseReference {
-        
-        return Database.database().reference().child(Constants.ID)
-        
-    }
-    
     private var userSRef : StorageReference {
         return Storage.storage().reference().child(Constants.ID)
     }
     
     private func setLabels(){
         print("started to retrieve info")
-        userRef.child(DBProvider.Instance.id!).observeSingleEvent(of: .value, with: {
-            snapshot in
-            if let items = snapshot.value as? [String:String]{
-                self.aboutMeLabel.text = items[Constants.ABOUTME]
-                self.emailAddressLabel.text = items[Constants.EMAIL]
-                self.phoneNumberLabel.text = items[Constants.PHONENUMBER]
-                let fn = items[Constants.FIRSTNAME]
-                let ln = items[Constants.LASTNAME]
-                self.myNameLabel.text = fn! + " " + ln!
-            }
-        })
+        if let data = db.getUserProfile(userID: db.id){
+            self.aboutMeLabel.text = data[Constants.ABOUTME] as! String
+            self.emailAddressLabel.text = data[Constants.EMAIL] as? String
+            self.phoneNumberLabel.text = data[Constants.PHONENUMBER] as? String
+            let fn = data[Constants.FIRSTNAME]
+            let ln = data[Constants.LASTNAME]
+            self.myNameLabel.text = (fn! as! String) + " " + (ln! as! String)
+        } else {
+            self.alertTheUser(title: db.dataErrorMessage, message: "Sorry, could not get profile data")
+        }
     }
     
     private func setProfilePicture(){
         print("Started to retrieve profile picture")
-        let storageRef = userSRef.child(db.id!).child("Profile Picture")
+        let storageRef = userSRef.child(db.id).child("Profile Picture")
         let maxSize: Int64 = 3 * 1024 * 1024
         storageRef.getData(maxSize: maxSize) { (data, error) in
             if (error != nil) {
@@ -86,5 +76,12 @@ class myPageViewController: UIViewController {
         phoneNumberLabel.layer.borderColor = UIColor.lightGray.cgColor
         phoneNumberLabel.layer.borderWidth = 0.5
         phoneNumberLabel.layer.cornerRadius = 8
+    }
+    
+    private func alertTheUser(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class menuViewController: UIViewController {
     
@@ -20,8 +19,8 @@ class menuViewController: UIViewController {
     private let logoutSegue = "logoutSegue"
     
     @IBAction func logoutButton(_ sender: Any) {
-        let auther = Authenticator()
-        if !(auther.logout()) {
+        let auth = Authenticator()
+        if !(auth.logout()) {
             self.alertTheUser(title: "Error: Could not Logout", message: "Sorry about this. Try restarting the app and try again.")
         } else {
             performSegue(withIdentifier: self.logoutSegue, sender: nil)

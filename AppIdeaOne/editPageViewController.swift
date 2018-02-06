@@ -17,8 +17,6 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
         createBorders()
         setLabels()
     }
-        
-    private let profileCreator = setUpProfile()
     
     private let db = DBProvider()
     
@@ -51,10 +49,6 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
         })
     }
     
-    @IBAction func editProfilePicture(_ sender: Any) {
-        //profileCreator.swapPhoto(profilePicture)
-    }
-    
     @IBAction func changePhotoButton(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -84,7 +78,7 @@ class editPageViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     private func setLabels(){
-        userRef.child(DBProvider.Instance.id!).observeSingleEvent(of: .value, with: {
+        userRef.child(db.id).observeSingleEvent(of: .value, with: {
             snapshot in
             if let items = snapshot.value as? [String:String]{
                 let aboutMe = items[Constants.ABOUTME]

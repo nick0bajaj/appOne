@@ -107,9 +107,12 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
                     print("New city: \(diff.document.data())")
-                    let date = diff.document.data()[Constants.DATE] as! String
+                    let date = diff.document.data()[Constants.DATE] as! NSDate
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd-MM-yyyy"
+                    let stringDate: String = dateFormatter.string(from: date as Date)
                     let address = diff.document.data()[Constants.ADDRESS] as! String
-                    self.posts.insert(tripPost(date: date as String, address: address), at: 0)
+                    self.posts.insert(tripPost(date: stringDate, address: address), at: 0)
                     self.tripsTableView.reloadData()
                 }
             }

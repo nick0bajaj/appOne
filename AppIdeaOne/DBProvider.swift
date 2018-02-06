@@ -17,13 +17,17 @@ import UIKit
 
 class DBProvider {
     
-    private static let instance = DBProvider()
+    static let instance = DBProvider()
     
-    static var Instance : DBProvider {
-        return instance
+    let id = Auth.auth().currentUser!.uid
+    
+    let dataErrorMessage = "Problem with Uploading Data"
+    
+    private let db = Firestore.firestore()
+    
+    var Instance : DBProvider {
+        return .instance
     }
-    
-    let id = Auth.auth().currentUser?.uid
     
     var userRef: DatabaseReference {
     
@@ -35,27 +39,23 @@ class DBProvider {
         return Storage.storage().reference().child("users").child(Constants.ID)
     }
     
-    var db = Firestore.firestore()
-    
-    
-    func saveUser(withID: String, firstName: String, lastName: String, email: String, password: String){
-        let emailChecker = supportedColleges()
-        let college: String = emailChecker.whatCollege(email: email)
-        uploadInfo(Location: Constants.EMAIL, Value: email)
-        uploadInfo(Location: Constants.COLLEGE, Value: college)
-        uploadInfo(Location: Constants.FIRSTNAME, Value: firstName)
-        uploadInfo(Location: Constants.LASTNAME, Value: lastName)
-        uploadInfo(Location: Constants.PASSWORD, Value: password)
-        uploadInfo(Location: Constants.PHONENUMBER, Value: "")
-        uploadInfo(Location: Constants.ABOUTME, Value: "")
+    func saveUser(firstName: String, lastName: String, email: String, password: String)-> String?{
+        let userDate : [String : AnyObject] = [
+            Constants.EMAIL : email as AnyObject!,
+            Constants.FIRSTNAME : firstName as AnyObject!,
+            Constants.LASTNAME : lastName as AnyObject!,
+            Constants.PASSWORD : password as AnyObject!,
+        ]
+        var errorMessage : String? = nil
+        errorMessage = uploadMapToUser(location: Constants.USERS, map: userDate)
+        return errorMessage
     }
     
     func uploadImage(_ image: UIImage, completionBlock: @escaping (_ url: URL?, _ errorMessage: String?) -> Void){
-        _ = "Profile Picture"
         if let imageData =  UIImageJPEGRepresentation(image, 0.8){
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpg"
-            _ = userStorageRef.child(self.id!).child(Constants.PROFILEPICTURE).putData(imageData, metadata: metadata, completion: {(metadata, error) in
+            _ = userStorageRef.child(self.id).child(Constants.PROFILEPICTURE).putData(imageData, metadata: metadata, completion: {(metadata, error) in
                 if let metadata = metadata{
                     completionBlock(metadata.downloadURL(), nil)
                 } else {
@@ -79,16 +79,44 @@ class DBProvider {
         if(Location != Constants.PASSWORD){
             data = Value.lowercased()
         }
-        userRef.child(self.id!).child(Location).setValue(data)
+        userRef.child(self.id).child(Location).setValue(data)
     }
     
-    func uploadTrip(trip : [String : AnyObject]) {
+    func uploadMapToUser(location: String, map : [String : AnyObject]) -> String?{
+        var errorMessage : String? = nil
+        db.collection(location).document(self.id).setData(map){
+            err in
+            if let err = err {
+                print("Error adding document in uploadMapToUser: \(err)")
+                errorMessage = "Sorry, could not upload info. Try again later"
+            }
+        }
+        return errorMessage
+    }
+    
+    func uploadTrip(trip : [String : AnyObject])-> String? {
         //Document added with ID: \(ref!.documentID)
+        var errorMessage : String? = nil
         db.collection(Constants.TRIPS).addDocument(data: trip){
             err in
             if let err = err {
-                print("Error adding document: \(err)")
+                print("Error adding document in uploadTrip: \(err)")
+                errorMessage = "Sorry, could not post trip. Try again later."
             }
         }
+        return errorMessage
+    }
+    
+    func getUserProfile(userID: String)-> [String : AnyObject]?{
+        var data : [String: AnyObject]? = nil
+        db.collection(Constants.USERS).document(userID).getDocument { (document, error) in
+            if let document = document {
+                print("Document data: \(String(describing: document.data()))")
+                data = document.data()
+            } else {
+                print("Document does not exist, error:  \(String(describing: error))")
+            }
+        }
+        return data
     }
 }

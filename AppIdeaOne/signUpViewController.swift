@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class signUpViewController: UIViewController {
     
     override func viewDidLoad() {
         
@@ -29,31 +29,25 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     
     private let myPage = "editPageSegue"
-    
+        
     @IBAction func signUpButton(_ sender: AnyObject) {
-        let auth = Authenticator()
-        let nameCheck = auth.checkName(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!)
-        if (nameCheck != "") {
-            self.alertTheUser(title: "Problem with Authentication", message: nameCheck)
-            return
-        }
-        let emailCheck = auth.checkEmail(email: emailAddressTextField.text!)
-        if (emailCheck != ""){
-            self.alertTheUser(title: "Problem with Authentication", message: emailCheck)
-            return
-        }
-        let passwordCheck = auth.passwordsPass(firstPassword: desiredPasswordTextField.text!, secondPassword: confirmPasswordTextField.text!)
-        if (passwordCheck != ""){
-            self.alertTheUser(title: "Problem with Authentication", message: passwordCheck)
-            return
+        var providedErrorMessage: String? = nil
+        var errorMessage : String? = nil
+        let titleErrorMessage = Authenticator.authorizer.authenticatorErrorMessage
+        errorMessage = Authenticator.authorizer.signUp(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailAddressTextField.text!, firstPassword: desiredPasswordTextField.text!, secondPassword: confirmPasswordTextField.text!, loginHandler: { (message) in
+            providedErrorMessage = message
+            if (message != nil){
+                self.alertTheUser(title: "Problem with Creating Account", message: message!)
+            } else {
+                self.performSegue(withIdentifier: self.myPage, sender: nil)
+            }
+        })
+        if(providedErrorMessage != nil){
+            self.alertTheUser(title: titleErrorMessage, message: providedErrorMessage!)
+        } else if (errorMessage != nil){
+            self.alertTheUser(title: titleErrorMessage, message: errorMessage!)
         } else {
-            auth.signUp(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailAddressTextField.text!, password: desiredPasswordTextField.text!, loginHandler: { (message) in
-                if (message != nil){
-                    self.alertTheUser(title: "Problem with Creating Account", message: message!)
-                } else {
-                    self.performSegue(withIdentifier: self.myPage, sender: nil)
-                }
-            })
+            print("Signup Completed! - from func SignUpButton")
         }
     }
     
@@ -61,6 +55,6 @@ class SignUpViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }
